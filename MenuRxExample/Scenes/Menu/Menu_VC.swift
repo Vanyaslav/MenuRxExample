@@ -36,7 +36,6 @@ class MenuItemButton: UIButton {
 }
 
 class Menu_VC: UIViewController {
-    //
     private lazy var menuView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -61,10 +60,6 @@ class Menu_VC: UIViewController {
         menuButtons
             .mutualExclusiveSelection()
             .disposed(by: disposeBag)
-        
-//        viewModel.selectItem.asObservable()
-//            .bind{ menuButtons.mutualExclusive($0).disposed(by: self.disposeBag)}
-//            .disposed(by: disposeBag)
         
         return sv
     }()

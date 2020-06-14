@@ -78,14 +78,11 @@
 		A10D2CF22488FD3C00923F9E /* MenuRxExample */ = {
 			isa = PBXGroup;
 			children = (
+				A1D0B1BB2496B104003CFFE4 /* Scenes */,
+				A1D0B1BA2496B0DE003CFFE4 /* Extension */,
 				A10D2D0F2489541A00923F9E /* Support */,
 				A10D2CF32488FD3D00923F9E /* AppDelegate.swift */,
-				A10D2D0B2489536C00923F9E /* Menu.swift */,
 				A10D2D07248952DB00923F9E /* AppCoordinator.swift */,
-				A10D2CF72488FD3D00923F9E /* Menu_VC.swift */,
-				A10D2D102489567D00923F9E /* Menu_VM.swift */,
-				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
-				A10D2D092489531900923F9E /* Observable+Extension.swift */,
 			);
 			path = MenuRxExample;
 			sourceTree = "<group>";
@@ -98,6 +95,33 @@
 				A10D2D012488FD4000923F9E /* Info.plist */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		A1D0B1BA2496B0DE003CFFE4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A10D2D092489531900923F9E /* Observable+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1D0B1BB2496B104003CFFE4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A1D0B1BC2496B155003CFFE4 /* Menu */,
+				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A1D0B1BC2496B155003CFFE4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A10D2D0B2489536C00923F9E /* Menu.swift */,
+				A10D2CF72488FD3D00923F9E /* Menu_VC.swift */,
+				A10D2D102489567D00923F9E /* Menu_VM.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		B10F5447255E50DCE92EB17E /* Frameworks */ = {
