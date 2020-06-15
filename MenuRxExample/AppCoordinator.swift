@@ -31,19 +31,19 @@ class AppCoordinator {
         let menu = Menu_VC(viewModel: Menu_VM(context: context))
         let rootView = UINavigationController(rootViewController: menu)
        
-            let home = Selection_VC(with: .home)
-            let detailView = UINavigationController(rootViewController: home)
-            
-            let sv = UISplitViewController()
-            sv.preferredDisplayMode = .allVisible
-            sv.viewControllers = [rootView, detailView]
-            
-            window.rootViewController = sv
-            //
-            context.itemSelected
-                .subscribe(onNext:{ item in
-                    sv.showDetailViewController(UINavigationController(rootViewController: Selection_VC(with: item)),
-                                                sender: nil) })
-                .disposed(by: disposeBag)
+        let home = Selection_VC(with: .home)
+        let detailView = UINavigationController(rootViewController: home)
+        
+        let sv = UISplitViewController()
+        sv.preferredDisplayMode = .allVisible
+        sv.viewControllers = [rootView, detailView]
+        
+        window.rootViewController = sv
+        //
+        context.itemSelected
+            .subscribe(onNext:{ item in
+                sv.showDetailViewController(UINavigationController(rootViewController: Selection_VC(with: item)),
+                                            sender: nil) })
+            .disposed(by: disposeBag)
     }
 }

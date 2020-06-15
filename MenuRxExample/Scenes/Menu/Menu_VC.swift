@@ -44,8 +44,7 @@ class Menu_VC: UIViewController {
         sv.spacing = 2
         //
         Menu.Item.allCases
-            .enumerated()
-            .map{ index, value in MenuItemButton(text: value.title, tag: index) }
+            .map{ value in MenuItemButton(text: value.title, tag: value.rawValue) }
             .forEach(sv.addArrangedSubview)
         
         let menuButtons = Observable

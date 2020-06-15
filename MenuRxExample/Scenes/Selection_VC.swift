@@ -10,8 +10,6 @@ import UIKit
 import RxSwift
 
 class Selection_VC: UIViewController {
-    private let disposeBag = DisposeBag()
-    
     private lazy var button: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle(self.item.title, for: .normal)
@@ -24,6 +22,7 @@ class Selection_VC: UIViewController {
         return button
     }()
     
+    private let disposeBag = DisposeBag()
     private let item: Menu.Item
     
     init(with item: Menu.Item) {
