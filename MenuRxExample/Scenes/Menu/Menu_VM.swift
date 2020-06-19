@@ -8,12 +8,11 @@
 
 import RxSwift
 import RxCocoa
+import RxSwiftExt
 
 class Menu_VM {
     // in
     let itemPressed = PublishSubject<Int>()
-    // out
-    let selectItem: Driver<Int>
     
     private let disposeBag = DisposeBag()
     
@@ -22,9 +21,5 @@ class Menu_VM {
             .map{ Menu.Item(rawValue: $0)!}
             .bind(to: context.itemSelected)
             .disposed(by: disposeBag)
-        
-        selectItem = itemPressed
-            .startWith(0)
-            .asDriver(onErrorJustReturn: 0)
     }
 }

@@ -9,10 +9,10 @@
 import RxSwift
 
 extension Observable where Element: UIButton {
-    func mutualExclusiveSelection() -> Disposable {
+    func mutualExclusiveSelection(starts: Int) -> Disposable {
         return scan(Disposables.create()) { disposable, button in
-            let subscription = self.selectedButton()
-                .map{ $0 == button }.debug("selected: ")
+            let subscription = self.selectedTag().startWith(starts)
+                .map{ $0 == button.tag }.debug("selected item: ")
                 .bind(to: button.rx.isSelected)
             return Disposables.create(disposable, subscription)
         }.subscribe()

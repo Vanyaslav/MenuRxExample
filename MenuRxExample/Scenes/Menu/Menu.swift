@@ -8,6 +8,16 @@
 
 import RxSwift
 
+extension Menu {
+    static let defaultPage = Menu.Item.info
+}
+
+extension Menu {
+    class Context {
+        let itemSelected = PublishSubject<Item>()
+    }
+}
+
 class Menu {
     enum Item: Int, CaseIterable {
         case home = 0, select1, select2, select3, info
@@ -26,11 +36,5 @@ class Menu {
                 return "Info"
             }
         }
-    }
-}
-//
-extension Menu {
-    class Context {
-        let itemSelected = PublishSubject<Item>()
     }
 }

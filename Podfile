@@ -8,6 +8,7 @@ target 'MenuRxExample' do
   # Pods for MenuRxExample
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
+    pod 'RxSwiftExt'
     
     post_install do |installer|
        installer.pods_project.targets.each do |target|

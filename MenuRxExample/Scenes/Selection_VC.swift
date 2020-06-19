@@ -38,17 +38,17 @@ class Selection_VC: UIViewController {
         ])
         
         switch item {
-            case .home:
-                view.backgroundColor = .cyan
-            case .select1:
-                view.backgroundColor = .systemIndigo
-            case .select2:
-                view.backgroundColor = .orange
-            case .select3:
-                view.backgroundColor = .magenta
-            case .info:
-                view.backgroundColor = .black
-           }
+        case .home:
+            view.backgroundColor = .cyan
+        case .select1:
+            view.backgroundColor = .systemIndigo
+        case .select2:
+            view.backgroundColor = .orange
+        case .select3:
+            view.backgroundColor = .magenta
+        case .info:
+            view.backgroundColor = .black
+        }
     }
     
     required init?(coder: NSCoder) {

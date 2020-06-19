@@ -57,7 +57,7 @@ class Menu_VC: UIViewController {
             .disposed(by: disposeBag)
         
         menuButtons
-            .mutualExclusiveSelection()
+            .mutualExclusiveSelection(starts: Menu.defaultPage.rawValue)
             .disposed(by: disposeBag)
         
         return sv
@@ -69,6 +69,7 @@ class Menu_VC: UIViewController {
     init(viewModel: Menu_VM) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
         self.view.addSubview(menuView)
         self.view.backgroundColor = .systemGray
         

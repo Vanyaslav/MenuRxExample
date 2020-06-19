@@ -28,19 +28,18 @@ class AppCoordinator {
     }
     
     func start() {
-        let menu = Menu_VC(viewModel: Menu_VM(context: context))
+        let model = Menu_VM(context: context)
+        let menu = Menu_VC(viewModel: model)
         let rootView = UINavigationController(rootViewController: menu)
-       
-        let home = Selection_VC(with: .home)
-        let detailView = UINavigationController(rootViewController: home)
         
         let sv = UISplitViewController()
         sv.preferredDisplayMode = .allVisible
-        sv.viewControllers = [rootView, detailView]
+        sv.viewControllers = [rootView]
         
         window.rootViewController = sv
         //
         context.itemSelected
+            .startWith(Menu.defaultPage)
             .subscribe(onNext:{ item in
                 sv.showDetailViewController(UINavigationController(rootViewController: Selection_VC(with: item)),
                                             sender: nil) })
