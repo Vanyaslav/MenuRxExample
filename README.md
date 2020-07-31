@@ -1,3 +1,3 @@
 # MenuRxExample
 
-An RxSwift example project with MVVM - C.
+RxSwift example project with MVVM - C.
