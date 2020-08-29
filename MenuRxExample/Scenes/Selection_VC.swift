@@ -12,21 +12,21 @@ import RxSwift
 class Selection_VC: UIViewController {
     private lazy var button: UIButton = {
         let button = UIButton(frame: .zero)
-        button.setTitle(self.item.title, for: .normal)
+        button.setTitle(viewModel.initialItem.title, for: .normal)
         button.backgroundColor = .init(white: 0.7, alpha: 0.5)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         button.rx.tap
-            .subscribe(onNext: { [unowned self] _ in print("Button \(self.item.title) pressed") })
+            .bind(to: viewModel.itemPressed)
             .disposed(by: disposeBag)
         return button
     }()
     
     private let disposeBag = DisposeBag()
-    private let item: Menu.Item
+    private let viewModel: Selection_VM!
     
-    init(with item: Menu.Item) {
-        self.item = item
+    init(with viewModel: Selection_VM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
         modalPresentationStyle = .overCurrentContext
@@ -37,7 +37,7 @@ class Selection_VC: UIViewController {
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        switch item {
+        switch viewModel.initialItem {
         case .home:
             view.backgroundColor = .cyan
         case .select1:

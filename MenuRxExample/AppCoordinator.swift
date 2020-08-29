@@ -40,7 +40,7 @@ class AppCoordinator {
         context.itemSelected
             .startWith(Menu.defaultPage)
             .subscribe(onNext:{ item in
-                sv.showDetailViewController(UINavigationController(rootViewController: Selection_VC(with: item)),
+                sv.showDetailViewController(UINavigationController(rootViewController: Selection_VC(with: Selection_VM(with: item))),
                                             sender: nil) })
             .disposed(by: disposeBag)
     }
