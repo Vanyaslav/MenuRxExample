@@ -101,6 +101,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		A10ECC3324FADF2E009AD323 /* Seletion */ = {
+			isa = PBXGroup;
+			children = (
+				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
+				A1A5664724FAD4B30032F9CA /* Selection_VM.swift */,
+			);
+			path = Seletion;
+			sourceTree = "<group>";
+		};
 		A1D0B1BA2496B0DE003CFFE4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +121,8 @@
 		A1D0B1BB2496B104003CFFE4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A10ECC3324FADF2E009AD323 /* Seletion */,
 				A1D0B1BC2496B155003CFFE4 /* Menu */,
-				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
-				A1A5664724FAD4B30032F9CA /* Selection_VM.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

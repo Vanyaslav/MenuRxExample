@@ -33,7 +33,7 @@ class Menu_VC: UIViewController {
             .disposed(by: disposeBag)
         
         menuButtons
-            .mutualExclusiveSelection(starts: Menu.defaultPage.rawValue)
+            .mutualExclusiveSelection(with: Menu.defaultPage.rawValue)
             .disposed(by: disposeBag)
         
         return sv
