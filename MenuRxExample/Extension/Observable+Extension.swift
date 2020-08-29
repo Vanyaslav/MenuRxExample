@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 extension Observable where Element: UIButton {
     func mutualExclusiveSelection(starts: Int) -> Disposable {
@@ -26,5 +27,11 @@ extension Observable where Element: UIButton {
     
     func selectedButton() -> Observable<UIButton> {
         return map{ button in button.rx.tap.map{ button }}.merge()
+    }
+}
+
+extension Observable {
+    func asDriver() -> Driver<Element> {
+        return asDriver(onErrorDriveWith: .empty())
     }
 }

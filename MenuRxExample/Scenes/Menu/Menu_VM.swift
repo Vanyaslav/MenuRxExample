@@ -7,8 +7,6 @@
 //
 
 import RxSwift
-import RxCocoa
-import RxSwiftExt
 
 class Menu_VM {
     // in

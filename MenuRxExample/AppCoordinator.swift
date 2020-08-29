@@ -11,8 +11,6 @@ import RxSwift
 
 class AppCoordinator {
     private let disposeBag = DisposeBag()
-    private let context = Menu.Context()
-    
     private let window: UIWindow
     
     init(with window: UIWindow) {
@@ -28,6 +26,7 @@ class AppCoordinator {
     }
     
     func start() {
+        let context = Menu.Context()
         let model = Menu_VM(context: context)
         let menu = Menu_VC(viewModel: model)
         let rootView = UINavigationController(rootViewController: menu)
