@@ -6,20 +6,14 @@
 //  Copyright © 2020 Tomas Baculák. All rights reserved.
 //
 
-import RxSwift
+import UIKit
 
-extension Menu {
-    static let defaultPage = Menu.Item.info
-}
-
-extension Menu {
-    class Context {
-        let itemSelected = PublishSubject<Item>()
-    }
+extension Menu.ItemEnum {
+    static let initialItem = Menu.ItemEnum.info
 }
 
 class Menu {
-    enum Item: Int, CaseIterable {
+    enum ItemEnum: Int, CaseIterable {
         case home = 0, select1, select2, select3, info
         
         var title: String {
@@ -34,6 +28,21 @@ class Menu {
                 return "Third selection"
             case .info:
                 return "Info"
+            }
+        }
+        
+        var backgroundColor: UIColor {
+            switch self {
+            case .home:
+                return .cyan
+            case .select1:
+                return .systemIndigo
+            case .select2:
+                return .orange
+            case .select3:
+                return .magenta
+            case .info:
+                return .black
             }
         }
     }

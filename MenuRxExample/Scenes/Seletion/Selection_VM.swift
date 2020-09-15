@@ -10,17 +10,21 @@ import RxCocoa
 import RxSwift
 
 class Selection_VM {
-    let initialItem: Menu.Item
-    
+    // in
+    let willAppear = PublishSubject<Void>()
     let itemPressed = PublishSubject<Void>()
+    // out
+    let currentItem: Driver<Menu.ItemEnum>
     
     private let disposeBag = DisposeBag()
     
-    init(with item: Menu.Item) {
-        initialItem = item
+    init(with item: Menu.ItemEnum) {
+        currentItem = willAppear
+            .mapTo(item)
+            .asDriver()
         
         itemPressed
-            .subscribe(onNext: { _ in print(" Item " + item.title + " pressed.")})
+            .subscribe(onNext: { _ in print("Item " + item.title + " pressed.")})
             .disposed(by: disposeBag)
     }
     

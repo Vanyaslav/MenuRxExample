@@ -19,7 +19,7 @@ class Menu_VC: UIViewController {
         sv.axis = .vertical
         sv.spacing = 2
         //
-        Menu.Item.allCases
+        Menu.ItemEnum.allCases
             .map{ value in MenuItemButton(text: value.title, tag: value.rawValue) }
             .forEach(sv.addArrangedSubview)
         
@@ -33,7 +33,7 @@ class Menu_VC: UIViewController {
             .disposed(by: disposeBag)
         
         menuButtons
-            .mutualExclusiveSelection(with: Menu.defaultPage.rawValue)
+            .mutualExclusiveSelection(with: Menu.ItemEnum.initialItem.rawValue)
             .disposed(by: disposeBag)
         
         return sv
@@ -50,10 +50,18 @@ class Menu_VC: UIViewController {
         self.view.backgroundColor = .systemGray
         
         NSLayoutConstraint.activate([
-            menuView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            menuView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            menuView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10),
-            menuView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+            menuView.topAnchor
+                .constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+                            constant: 10),
+            menuView.bottomAnchor
+                .constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                            constant: -10),
+            menuView.leftAnchor
+                .constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,
+                            constant: 10),
+            menuView.rightAnchor
+                .constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
+                            constant: -10)
         ])
     }
     

@@ -14,7 +14,8 @@ extension Observable where Element: UIButton {
         return scan(Disposables.create()) { disposable, button in
             let subscription = self.selectedTag()
                 .startWith(initial)
-                .map{ $0 == button.tag }.debug("selected item: ")
+                .map{ $0 == button.tag }
+                .debug("selected item: ")
                 .bind(to: button.rx.isSelected)
             return Disposables.create(disposable, subscription)
         }.subscribe()

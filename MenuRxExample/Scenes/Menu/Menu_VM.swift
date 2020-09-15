@@ -7,17 +7,23 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class Menu_VM {
     // in
     let itemPressed = PublishSubject<Int>()
+    // out
+    let  selectedItem: Driver<Int>
     
     private let disposeBag = DisposeBag()
     
     init(context: Menu.Context) {
         itemPressed
-            .map{ Menu.Item(rawValue: $0)!}
+            .map{ Menu.ItemEnum(rawValue: $0) }
+            .unwrap()
             .bind(to: context.itemSelected)
             .disposed(by: disposeBag)
+        
+        selectedItem = itemPressed.asDriver()
     }
 }
