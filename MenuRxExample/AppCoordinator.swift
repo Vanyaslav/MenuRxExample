@@ -20,7 +20,7 @@ class AppCoordinator {
         #if DEBUG
         Observable<Int>
             .interval(.seconds(1), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { _ in  print("Resource count \(RxSwift.Resources.total)") })
+            .subscribe(onNext: { _ in print("Resource count \(RxSwift.Resources.total)") })
             .disposed(by: disposeBag)
         #endif
     }
@@ -38,7 +38,6 @@ class AppCoordinator {
         window.rootViewController = sv
         //
         context.itemSelected
-            .startWith(Menu.ItemEnum.initialItem)
             .subscribe(onNext:{ item in
                 let vc = Selection_VC(with: Selection_VM(with: item))
                 let nc = UINavigationController(rootViewController: vc)

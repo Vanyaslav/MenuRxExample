@@ -13,6 +13,7 @@ class MenuItemButton: UIButton {
         super.init(frame: .zero)
         self.setTitle(text, for: .normal)
         self.tag = tag
+        self.backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {

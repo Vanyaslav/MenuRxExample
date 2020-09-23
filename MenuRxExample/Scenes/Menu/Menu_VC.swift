@@ -19,21 +19,22 @@ class Menu_VC: UIViewController {
         sv.axis = .vertical
         sv.spacing = 2
         //
-        Menu.ItemEnum.allCases
-            .map{ value in MenuItemButton(text: value.title, tag: value.rawValue) }
-            .forEach(sv.addArrangedSubview)
+        let items = Menu.ItemEnum.allCases
+            .map{ MenuItemButton(text: $0.title, tag: $0.rawValue) }
         
-        let menuButtons = Observable
-            .from(sv.arrangedSubviews.filter{ $0 is MenuItemButton })
-            .map{ $0 as! MenuItemButton }
+        items.forEach(sv.addArrangedSubview)
         
-        menuButtons
-            .selectedTag()
-            .bind(to: viewModel.itemPressed)
+        viewModel.selectedItem
+            .drive(onNext: {
+                items.forEach{ $0.isSelected = false }
+                items[$0].isSelected = true })
             .disposed(by: disposeBag)
         
-        menuButtons
-            .mutualExclusiveSelection(with: Menu.ItemEnum.initialItem.rawValue)
+        Observable
+            .from(sv.arrangedSubviews.filter{ $0 is MenuItemButton })
+            .map{ $0 as! MenuItemButton }
+            .selectedTag()
+            .bind(to: viewModel.itemPressed)
             .disposed(by: disposeBag)
         
         return sv
@@ -63,6 +64,12 @@ class Menu_VC: UIViewController {
                 .constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
                             constant: -10)
         ])
+        //
+        rx.viewWillAppear
+            .take(1)
+            .map{ _ in }
+            .bind(to: viewModel.didLoad)
+            .disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {

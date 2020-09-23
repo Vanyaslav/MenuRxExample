@@ -12,18 +12,24 @@ import RxCocoa
 class Menu_VM {
     // in
     let itemPressed = PublishSubject<Int>()
+    let didLoad = PublishSubject<Void>()
     // out
-    let  selectedItem: Driver<Int>
+    let selectedItem: Driver<Int>
     
     private let disposeBag = DisposeBag()
     
     init(context: Menu.Context) {
-        itemPressed
+        let initialPage = Menu.ItemEnum.initialItem
+        
+        let action = Observable
+            .merge(didLoad.map{ initialPage.rawValue },
+                   itemPressed)
+        action
             .map{ Menu.ItemEnum(rawValue: $0) }
             .unwrap()
             .bind(to: context.itemSelected)
             .disposed(by: disposeBag)
         
-        selectedItem = itemPressed.asDriver()
+        selectedItem = action.asDriver()
     }
 }
