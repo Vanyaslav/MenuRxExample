@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 extension Observable where Element: UIButton {
+    // not used
     func mutualExclusiveSelection() -> Disposable {
         return scan(Disposables.create()) { disposable, button in
             let subscription = self.selectedTag()

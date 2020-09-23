@@ -27,5 +27,4 @@ class Selection_VM {
             .subscribe(onNext: { _ in print("Item " + item.title + " pressed.")})
             .disposed(by: disposeBag)
     }
-    
 }

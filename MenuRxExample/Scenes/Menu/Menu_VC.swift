@@ -20,8 +20,8 @@ class Menu_VC: UIViewController {
         sv.spacing = 2
         //
         let items = Menu.ItemEnum.allCases
-            .map{ MenuItemButton(text: $0.title, tag: $0.rawValue) }
-        
+            .map{ MenuItemButton(text: $0.title,
+                                 tag: $0.rawValue) }
         items.forEach(sv.addArrangedSubview)
         
         viewModel.selectedItem
@@ -31,8 +31,7 @@ class Menu_VC: UIViewController {
             .disposed(by: disposeBag)
         
         Observable
-            .from(sv.arrangedSubviews.filter{ $0 is MenuItemButton })
-            .map{ $0 as! MenuItemButton }
+            .from(items)
             .selectedTag()
             .bind(to: viewModel.itemPressed)
             .disposed(by: disposeBag)
