@@ -24,10 +24,16 @@ class Menu_VC: UIViewController {
                                  tag: $0.rawValue) }
         items.forEach(sv.addArrangedSubview)
         
+        func makeMutuallyExclusive(with selection: Int) {
+            items
+                .map{ $0.tag == selection }
+                .enumerated()
+                .forEach{ items[$0.offset].isSelected = $0.element }
+        }
+        
         viewModel.selectedItem
-            .drive(onNext: {
-                items.forEach{ $0.isSelected = false }
-                items[$0].isSelected = true })
+            .map(makeMutuallyExclusive)
+            .drive()
             .disposed(by: disposeBag)
         
         Observable

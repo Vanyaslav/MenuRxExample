@@ -18,8 +18,8 @@ class Menu_VM {
     
     private let disposeBag = DisposeBag()
     
-    init(context: Menu.Context) {
-        let initialPage = Menu.ItemEnum.initialItem
+    init(context: Menu.Context,
+         initialPage: Menu.ItemEnum = .defaultItem) {
         
         let action = Observable
             .merge(didLoad.map{ initialPage.rawValue },

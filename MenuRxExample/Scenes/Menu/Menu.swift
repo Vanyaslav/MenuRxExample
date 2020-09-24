@@ -9,7 +9,7 @@
 import UIKit
 
 extension Menu.ItemEnum {
-    static let initialItem = Menu.ItemEnum.info
+    static let defaultItem = Menu.ItemEnum.info
 }
 
 class Menu {

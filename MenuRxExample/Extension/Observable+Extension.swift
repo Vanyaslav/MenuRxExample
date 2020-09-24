@@ -13,8 +13,8 @@ extension Observable where Element: UIButton {
     // not used
     func mutualExclusiveSelection() -> Disposable {
         return scan(Disposables.create()) { disposable, button in
-            let subscription = self.selectedTag()
-                .map{ $0 == button.tag }
+            let subscription = self.selectedButton()
+                .map{ $0 == button }
                 .debug("selected item: ")
                 .bind(to: button.rx.isSelected)
             return Disposables.create(disposable, subscription)
