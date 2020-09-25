@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+
+extension Menu {
+    class Context {
+        let itemSelected = PublishSubject<ItemEnum>()
+    }
+}
 
 extension Menu.ItemEnum {
     static let defaultItem = Menu.ItemEnum.info
