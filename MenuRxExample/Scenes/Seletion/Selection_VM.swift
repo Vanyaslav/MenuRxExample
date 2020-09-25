@@ -11,7 +11,7 @@ import RxSwift
 
 class Selection_VM {
     // in
-    let willAppear = PublishSubject<Void>()
+    let didLoad = PublishSubject<Void>()
     let itemPressed = PublishSubject<Void>()
     // out
     let currentItem: Driver<Menu.ItemEnum>
@@ -19,7 +19,7 @@ class Selection_VM {
     private let disposeBag = DisposeBag()
     
     init(with item: Menu.ItemEnum) {
-        currentItem = willAppear
+        currentItem = didLoad
             .mapTo(item)
             .asDriver()
         

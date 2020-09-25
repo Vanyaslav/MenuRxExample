@@ -51,6 +51,18 @@ class Menu_VC: UIViewController {
     init(viewModel: Menu_VM) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        //
+        rx.viewDidLoad
+            .bind(to: viewModel.didLoad)
+            .disposed(by: disposeBag)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        super.loadView()
         
         self.view.addSubview(menuView)
         self.view.backgroundColor = .systemGray
@@ -69,15 +81,5 @@ class Menu_VC: UIViewController {
                 .constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
                             constant: -10)
         ])
-        //
-        rx.viewWillAppear
-            .take(1)
-            .map{ _ in }
-            .bind(to: viewModel.didLoad)
-            .disposed(by: disposeBag)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

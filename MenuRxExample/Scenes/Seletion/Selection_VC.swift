@@ -35,6 +35,19 @@ class Selection_VC: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
+        rx.viewDidLoad
+            .bind(to: viewModel.didLoad)
+            .disposed(by: disposeBag)
+        
+        viewModel.currentItem
+            .map{ $0.backgroundColor }
+            .drive(view.rx.backgroundColor)
+            .disposed(by: disposeBag)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
         modalPresentationStyle = .overCurrentContext
         
         view.addSubview(button)
@@ -44,15 +57,6 @@ class Selection_VC: UIViewController {
             button.centerYAnchor
                 .constraint(equalTo: view.centerYAnchor)
         ])
-        
-        rx.viewWillAppear.map{_ in }
-            .bind(to: viewModel.willAppear)
-            .disposed(by: disposeBag)
-        
-        viewModel.currentItem
-            .map{ $0.backgroundColor }
-            .drive(view.rx.backgroundColor)
-            .disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
