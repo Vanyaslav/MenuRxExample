@@ -9,6 +9,8 @@ target 'MenuRxExample' do
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
     pod 'RxSwiftExt'
+    pod 'ReusableKit'
+    pod 'RxDataSources'
     
     post_install do |installer|
        installer.pods_project.targets.each do |target|
