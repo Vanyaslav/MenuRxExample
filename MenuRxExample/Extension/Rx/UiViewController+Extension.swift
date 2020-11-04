@@ -22,4 +22,8 @@ extension Reactive where Base: UIViewController {
     var viewDidAppear: Observable<Bool> {
         return base.rx.methodInvoked(#selector(Base.viewDidAppear(_:))).map { $0[0] as! Bool }
     }
+    
+    var viewDidDisappear: Observable<Bool> {
+        return base.rx.methodInvoked(#selector(Base.viewDidDisappear(_:))).map { $0[0] as! Bool }
+    }
 }

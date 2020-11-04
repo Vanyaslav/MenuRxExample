@@ -9,7 +9,13 @@
 import UIKit
 
 class PresetsCell: UITableViewCell {
-    func set(item: Table_VM.PresetItem) {
-        
+    
+    @IBOutlet var titleLabel: UILabel!
+    
+    @IBOutlet var dateLabel: UILabel!
+    
+    func set(item: Preset_VM.PresetItem) {
+        titleLabel.text = item.title
+        dateLabel.text = item.date
     }
 }

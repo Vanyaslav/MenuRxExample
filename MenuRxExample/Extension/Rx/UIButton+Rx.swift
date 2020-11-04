@@ -1,13 +1,12 @@
 //
-//  Observable+Extension.swift
+//  UIButton+Rx.swift
 //  MenuRxExample
 //
-//  Created by Tomas Baculák on 04/06/2020.
+//  Created by Tomas Baculák on 04/11/2020.
 //  Copyright © 2020 Tomas Baculák. All rights reserved.
 //
 
 import RxSwift
-import RxCocoa
 
 extension Observable where Element: UIButton {
     // not used
@@ -29,11 +28,5 @@ extension Observable where Element: UIButton {
     
     func selectedButton() -> Observable<UIButton> {
         return map{ button in button.rx.tap.map{ button }}.merge()
-    }
-}
-
-extension Observable {
-    func asDriver() -> Driver<Element> {
-        return asDriver(onErrorDriveWith: .empty())
     }
 }

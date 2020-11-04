@@ -6,8 +6,8 @@ target 'MenuRxExample' do
   use_frameworks!
 
   # Pods for MenuRxExample
-    pod 'RxSwift', '~> 5'
-    pod 'RxCocoa', '~> 5'
+    pod 'RxSwift'
+    pod 'RxCocoa'
     pod 'RxSwiftExt'
     pod 'ReusableKit'
     pod 'RxDataSources'

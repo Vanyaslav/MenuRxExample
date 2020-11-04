@@ -16,17 +16,17 @@ extension Menu {
 }
 
 extension Menu.ItemEnum {
-    static let defaultItem = Menu.ItemEnum.info
+    static let defaultItem: Menu.ItemEnum = .preset
 }
 
 class Menu {
     enum ItemEnum: Int, CaseIterable {
-        case home = 0, select1, select2, select3, info
+        case preset = 0, select1, select2, select3, info
         
         var title: String {
             switch self {
-            case .home:
-                return "Home"
+            case .preset:
+                return "Presets"
             case .select1:
                 return "First selection"
             case .select2:
@@ -37,20 +37,22 @@ class Menu {
                 return "Info"
             }
         }
-        
-        var backgroundColor: UIColor {
-            switch self {
-            case .home:
-                return .cyan
-            case .select1:
-                return .systemIndigo
-            case .select2:
-                return .orange
-            case .select3:
-                return .magenta
-            case .info:
-                return .black
-            }
+    }
+}
+
+extension Menu.ItemEnum {
+    var backgroundColor: UIColor {
+        switch self {
+        case .preset:
+            return .cyan
+        case .select1:
+            return .systemIndigo
+        case .select2:
+            return .orange
+        case .select3:
+            return .magenta
+        case .info:
+            return .black
         }
     }
 }

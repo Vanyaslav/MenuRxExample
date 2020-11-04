@@ -18,24 +18,24 @@ class Menu_VC: UIViewController {
             sv.distribution = .fillEqually
             sv.axis = .vertical
             sv.spacing = 2
-        // data
+        // buttons
         let items = Menu.ItemEnum
             .allCases
             .map{ MenuItemButton(text: $0.title, tag: $0.rawValue) }
         
         items.forEach(sv.addArrangedSubview)
-        // behaviour
+        //
         func makeMutuallyExclusive(with selection: Int) {
             items.map{ $0.tag == selection }
                 .enumerated()
                 .forEach{ items[$0.offset].isSelected = $0.element }
         }
-        // action
+        // manage selection
         viewModel.selectedItem
             .map(makeMutuallyExclusive)
             .drive()
             .disposed(by: disposeBag)
-        
+        // binding
         Observable
             .from(items)
             .selectedTag()

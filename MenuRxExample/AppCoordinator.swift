@@ -38,10 +38,17 @@ class AppCoordinator {
         window.rootViewController = sv
         //
         context.itemSelected
+            .filter{ $0 != .preset }
             .subscribe(onNext:{ item in
                 let vc = Selection_VC(with: Selection_VM(with: item))
                 let nc = UINavigationController(rootViewController: vc)
                 sv.showDetailViewController(nc, sender: nil) })
+            .disposed(by: disposeBag)
+        
+        context.itemSelected
+            .filter{ $0 == .preset }
+            .map{ _ in PresetCoordinator(splitView: sv).start() }
+            .subscribe()
             .disposed(by: disposeBag)
     }
 }
