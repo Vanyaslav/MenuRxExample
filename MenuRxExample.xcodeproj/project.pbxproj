@@ -143,13 +143,13 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		A10ECC3324FADF2E009AD323 /* Seletion */ = {
+		A10ECC3324FADF2E009AD323 /* Selection */ = {
 			isa = PBXGroup;
 			children = (
 				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
 				A1A5664724FAD4B30032F9CA /* Selection_VM.swift */,
 			);
-			path = Seletion;
+			path = Selection;
 			sourceTree = "<group>";
 		};
 		A15EC73C2552B3D4004B8C87 /* Rx */ = {
@@ -255,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				A185BCF3254DC1BA0057F2DB /* Preset */,
-				A10ECC3324FADF2E009AD323 /* Seletion */,
+				A10ECC3324FADF2E009AD323 /* Selection */,
 				A1D0B1BC2496B155003CFFE4 /* Menu */,
 			);
 			path = Scenes;
