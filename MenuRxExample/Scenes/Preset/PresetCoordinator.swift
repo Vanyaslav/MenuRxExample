@@ -9,29 +9,25 @@
 import UIKit
 import RxSwift
 
-
 class PresetCoordinator {
-    private let disposeBag = CompositeDisposable()
-    private let splitView: UISplitViewController
+    private
+    let disposeBag = CompositeDisposable()
     
     init(splitView: UISplitViewController) {
-        self.splitView = splitView
-    }
-    
-    func start() {
         let context = Preset.Context()
         let presetsView = Preset_VC(viewModel: Preset_VM(context: context))
         let nc = UINavigationController(rootViewController: presetsView)
         splitView.showDetailViewController(nc, sender: nil)
         
-        context.showPresetAlert
-            .map{ ($0, presetsView) }
-            .subscribeNext(weak: self, PresetCoordinator.showPresetAlert)
+        context.showPresetInfoAlert
+            .map(presetsView.showPresetAlert)
+            .subscribe()
             .disposed(by: disposeBag)
         
-        context.showCreateAlert
-            .map{ (context, presetsView) }
-            .subscribeNext(weak: self, PresetCoordinator.showCreatePresetAlert)
+        context.showCreatePresetAlert
+            .map{ context }
+            .map(presetsView.showCreatePresetAlert)
+            .subscribe()
             .disposed(by: disposeBag)
         
         context.dispose

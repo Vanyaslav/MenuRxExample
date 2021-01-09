@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 
 class Selection_VC: UIViewController {
-    private lazy var button: UIButton = {
+    private
+    lazy var button: UIButton = {
         let button = UIButton(frame: .zero)
         button.backgroundColor = .init(white: 0.7, alpha: 0.5)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -28,8 +29,10 @@ class Selection_VC: UIViewController {
         return button
     }()
     
-    private let disposeBag = DisposeBag()
-    private let viewModel: Selection_VM!
+    private
+    let disposeBag = DisposeBag()
+    private
+    let viewModel: Selection_VM
     
     init(with viewModel: Selection_VM) {
         self.viewModel = viewModel

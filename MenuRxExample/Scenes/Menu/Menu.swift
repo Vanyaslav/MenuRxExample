@@ -15,10 +15,6 @@ extension Menu {
     }
 }
 
-extension Menu.ItemEnum {
-    static let defaultItem: Menu.ItemEnum = .preset
-}
-
 class Menu {
     enum ItemEnum: Int, CaseIterable {
         case preset = 0, select1, select2, select3, info
@@ -36,23 +32,6 @@ class Menu {
             case .info:
                 return "Info"
             }
-        }
-    }
-}
-
-extension Menu.ItemEnum {
-    var backgroundColor: UIColor {
-        switch self {
-        case .preset:
-            return .cyan
-        case .select1:
-            return .systemIndigo
-        case .select2:
-            return .orange
-        case .select3:
-            return .magenta
-        case .info:
-            return .black
         }
     }
 }

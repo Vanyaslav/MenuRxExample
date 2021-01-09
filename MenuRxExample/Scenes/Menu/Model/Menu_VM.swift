@@ -16,7 +16,8 @@ class Menu_VM {
     // out
     let selectedItem: Driver<Int>
     
-    private let disposeBag = DisposeBag()
+    private
+    let disposeBag = DisposeBag()
     
     init(context: Menu.Context,
          initialPage: Menu.ItemEnum = .defaultItem) {

@@ -8,17 +8,19 @@
 
 import RxSwift
 
-enum PresetEnum: Int, CaseIterable {
-    case factory, user
-    
-    var identity: Int { return rawValue }
-    
-    var title: String {
-        switch self {
-        case .factory:
-            return "Factory"
-        case .user:
-            return "User"
+extension Preset {
+    enum TypeEnum: Int, CaseIterable {
+        case factory, user
+        
+        var identity: Int { return rawValue }
+        
+        var title: String {
+            switch self {
+            case .factory:
+                return "Factory"
+            case .user:
+                return "User"
+            }
         }
     }
 }
@@ -26,8 +28,8 @@ enum PresetEnum: Int, CaseIterable {
 class Preset {
     class Context {
         // out
-        let showCreateAlert = PublishSubject<Void>()
-        let showPresetAlert = PublishSubject<String>()
+        let showCreatePresetAlert = PublishSubject<Void>()
+        let showPresetInfoAlert = PublishSubject<String>()
         let dispose = PublishSubject<Void>()
         // in
         let storePreset = PublishSubject<String>()

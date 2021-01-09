@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 class Menu_VC: UIViewController {
-    private lazy var menuView: UIStackView = {
+    lazy
+    var menuView: UIStackView = {
         let sv = UIStackView()
             sv.translatesAutoresizingMaskIntoConstraints = false
             sv.distribution = .fillEqually
@@ -45,8 +45,10 @@ class Menu_VC: UIViewController {
         return sv
     }()
     
-    private let disposeBag = DisposeBag()
-    private let viewModel: Menu_VM
+    private
+    let disposeBag = DisposeBag()
+    private
+    let viewModel: Menu_VM
     
     init(viewModel: Menu_VM) {
         self.viewModel = viewModel
@@ -59,27 +61,5 @@ class Menu_VC: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func loadView() {
-        super.loadView()
-        
-        self.view.addSubview(menuView)
-        self.view.backgroundColor = .systemGray
-        
-        NSLayoutConstraint.activate([
-            menuView.topAnchor
-                .constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                            constant: 10),
-            menuView.bottomAnchor
-                .constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                            constant: -10),
-            menuView.leftAnchor
-                .constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                            constant: 10),
-            menuView.rightAnchor
-                .constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                            constant: -10)
-        ])
     }
 }

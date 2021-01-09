@@ -8,16 +8,19 @@
 
 import Foundation
 
+extension Preset {
+    static let dataStringSeparator: String = ";"
+}
 
 extension Array where Element == String {
     func parsePresets() -> [Preset_VM.PresetItem] {
-        return map{ $0.components(separatedBy: ";") }
+        return map{ $0.components(separatedBy: Preset.dataStringSeparator) }
             .map{ Preset_VM.PresetItem(with: $0[0], date: $0[1]) }
     }
     
     func concatPresetData() -> String {
         return compactMap{ $0 }
             .filter{ !$0.isEmpty }
-            .joined(separator: ";")
+            .joined(separator: Preset.dataStringSeparator)
     }
 }

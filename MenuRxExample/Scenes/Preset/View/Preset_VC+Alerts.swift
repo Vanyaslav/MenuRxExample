@@ -9,8 +9,8 @@
 import UIKit
 
 // Alerts
-extension PresetCoordinator {
-    func showPresetAlert(with name: String, vc: UIViewController) {
+extension Preset_VC {
+    func showPresetAlert(with name: String) {
         let alert = UIAlertController(title: "Preset " + "\(name)",
                                       message: "can be loaded!!",
                                       preferredStyle: .alert)
@@ -19,10 +19,10 @@ extension PresetCoordinator {
                                       style: .cancel,
                                       handler: nil))
         
-        vc.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
-    //
-    func showCreatePresetAlert(with context: Preset.Context, vc: UIViewController) {
+    
+    func showCreatePresetAlert(with context: Preset.Context) {
         let alert = UIAlertController(title: nil,
                                       message: "Create a new preset:",
                                       preferredStyle: .alert)
@@ -31,10 +31,11 @@ extension PresetCoordinator {
         
         alert.addAction(UIAlertAction(title: "Save",
                                       style: .default,
-                                      handler: { [weak self] _ in
-                                        guard let title = textField.text, title.count > 2
+                                      handler: { _ in
+                                        guard let title = textField.text,
+                                              title.count >= Preset.minimalPresetNameLength
                                         else {
-                                            self?.showCreatePresetAlert(with: context, vc: vc)
+                                            self.showCreatePresetAlert(with: context)
                                             return
                                         }
                                         context.storePreset.onNext(title)
@@ -44,6 +45,6 @@ extension PresetCoordinator {
                                       style: .cancel,
                                       handler: nil))
         
-        vc.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

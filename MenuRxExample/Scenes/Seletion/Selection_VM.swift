@@ -16,7 +16,8 @@ class Selection_VM {
     // out
     let currentItem: Driver<Menu.ItemEnum>
     
-    private let disposeBag = DisposeBag()
+    private
+    let disposeBag = DisposeBag()
     
     init(with item: Menu.ItemEnum) {
         currentItem = didLoad

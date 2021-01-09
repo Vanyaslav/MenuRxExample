@@ -7,18 +7,32 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    private var appCoordinator: AppCoordinator?
+    
+    private
+    let disposeBag = DisposeBag()
+    
+    private
+    var appCoordinator: MenuCoordinator? {
+        didSet {
+            #if DEBUG
+            Observable<Int>
+                .interval(.seconds(1), scheduler: MainScheduler.instance)
+                .subscribe(onNext: { _ in print("Resource count \(RxSwift.Resources.total)") })
+                .disposed(by: disposeBag)
+            #endif
+        }
+    }
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        appCoordinator = AppCoordinator(with: window!)
-        appCoordinator!.start()
+        appCoordinator = MenuCoordinator(with: window!)
         return true
     }
 }

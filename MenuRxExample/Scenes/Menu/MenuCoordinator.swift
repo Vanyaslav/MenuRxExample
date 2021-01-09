@@ -9,23 +9,11 @@
 import UIKit
 import RxSwift
 
-class AppCoordinator {
-    private let disposeBag = DisposeBag()
-    private let window: UIWindow
+class MenuCoordinator {
+    private
+    let disposeBag = DisposeBag()
     
     init(with window: UIWindow) {
-        self.window = window
-        window.makeKeyAndVisible()
-        
-        #if DEBUG
-        Observable<Int>
-            .interval(.seconds(1), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { _ in print("Resource count \(RxSwift.Resources.total)") })
-            .disposed(by: disposeBag)
-        #endif
-    }
-    
-    func start() {
         let context = Menu.Context()
         let model = Menu_VM(context: context)
         let menu = Menu_VC(viewModel: model)
@@ -36,19 +24,21 @@ class AppCoordinator {
         sv.viewControllers = [rootView]
         
         window.rootViewController = sv
-        //
+        window.makeKeyAndVisible()
+        
         context.itemSelected
-            .filter{ $0 != .preset }
+            .filter{ $0.isDeployed }
+            .map{ _ in sv }
+            .map(PresetCoordinator.init)
+            .subscribe()
+            .disposed(by: disposeBag)
+
+        context.itemSelected
+            .filter{ !$0.isDeployed }
             .subscribe(onNext:{ item in
                 let vc = Selection_VC(with: Selection_VM(with: item))
                 let nc = UINavigationController(rootViewController: vc)
                 sv.showDetailViewController(nc, sender: nil) })
-            .disposed(by: disposeBag)
-        
-        context.itemSelected
-            .filter{ $0 == .preset }
-            .map{ _ in PresetCoordinator(splitView: sv).start() }
-            .subscribe()
             .disposed(by: disposeBag)
     }
 }

@@ -12,7 +12,7 @@
 		A10D2CF82488FD3D00923F9E /* Menu_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2CF72488FD3D00923F9E /* Menu_VC.swift */; };
 		A10D2CFD2488FD4000923F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10D2CFC2488FD4000923F9E /* Assets.xcassets */; };
 		A10D2D002488FD4000923F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10D2CFE2488FD4000923F9E /* LaunchScreen.storyboard */; };
-		A10D2D08248952DC00923F9E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D07248952DB00923F9E /* AppCoordinator.swift */; };
+		A10D2D08248952DC00923F9E /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D07248952DB00923F9E /* MenuCoordinator.swift */; };
 		A10D2D0A2489531900923F9E /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D092489531900923F9E /* Observable+Extension.swift */; };
 		A10D2D0C2489536C00923F9E /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D0B2489536C00923F9E /* Menu.swift */; };
 		A10D2D0E248953AA00923F9E /* Selection_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D0D248953AA00923F9E /* Selection_VC.swift */; };
@@ -21,7 +21,7 @@
 		A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7412552B433004B8C87 /* Disposable+Ext.swift */; };
 		A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */; };
 		A15EC74B2552BC59004B8C87 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC74A2552BC59004B8C87 /* Array+Ext.swift */; };
-		A15EC7652552E42F004B8C87 /* PresetCoordinator+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7642552E42F004B8C87 /* PresetCoordinator+Alerts.swift */; };
+		A15EC7652552E42F004B8C87 /* Preset_VC+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */; };
 		A15EC76D2552ED3D004B8C87 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC76C2552ED3D004B8C87 /* Preset.swift */; };
 		A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A163BE87250FB40500968DC0 /* UiViewController+Extension.swift */; };
 		A16EC88F2551FA5C00248AFC /* PresetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16EC88E2551FA5C00248AFC /* PresetCoordinator.swift */; };
@@ -29,9 +29,14 @@
 		A185BCF9254DC2200057F2DB /* Preset_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185BCF8254DC2200057F2DB /* Preset_VM.swift */; };
 		A185BD04254DF7770057F2DB /* PresetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185BD03254DF7770057F2DB /* PresetsCell.swift */; };
 		A185BD13254DFE610057F2DB /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185BD12254DFE610057F2DB /* Date+Ext.swift */; };
+		A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */; };
+		A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */; };
+		A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */; };
+		A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */; };
+		A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */; };
+		A192A10325AA17BD00E7EA9D /* Preset+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */; };
 		A1A5664624FAD1C80032F9CA /* MenuItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */; };
 		A1A5664824FAD4B30032F9CA /* Selection_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664724FAD4B30032F9CA /* Selection_VM.swift */; };
-		A1ADE71325519044001B59ED /* PresetsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ADE71225519044001B59ED /* PresetsCell.xib */; };
 		A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */; };
 		A1ADE71B25519B62001B59ED /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71A25519B62001B59ED /* StorageService.swift */; };
 		A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71E25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift */; };
@@ -44,7 +49,7 @@
 		A10D2CFC2488FD4000923F9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10D2CFF2488FD4000923F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A10D2D012488FD4000923F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A10D2D07248952DB00923F9E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A10D2D07248952DB00923F9E /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		A10D2D092489531900923F9E /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		A10D2D0B2489536C00923F9E /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		A10D2D0D248953AA00923F9E /* Selection_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection_VC.swift; sourceTree = "<group>"; };
@@ -53,7 +58,7 @@
 		A15EC7412552B433004B8C87 /* Disposable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disposable+Ext.swift"; sourceTree = "<group>"; };
 		A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Ext.swift"; sourceTree = "<group>"; };
 		A15EC74A2552BC59004B8C87 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
-		A15EC7642552E42F004B8C87 /* PresetCoordinator+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresetCoordinator+Alerts.swift"; sourceTree = "<group>"; };
+		A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+Alerts.swift"; sourceTree = "<group>"; };
 		A15EC76C2552ED3D004B8C87 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		A163BE87250FB40500968DC0 /* UiViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extension.swift"; sourceTree = "<group>"; };
 		A16EC88E2551FA5C00248AFC /* PresetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetCoordinator.swift; sourceTree = "<group>"; };
@@ -61,9 +66,14 @@
 		A185BCF8254DC2200057F2DB /* Preset_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_VM.swift; sourceTree = "<group>"; };
 		A185BD03254DF7770057F2DB /* PresetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsCell.swift; sourceTree = "<group>"; };
 		A185BD12254DFE610057F2DB /* Date+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+LoadView.swift"; sourceTree = "<group>"; };
+		A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Defaults.swift"; sourceTree = "<group>"; };
+		A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu_VC+LoadView.swift"; sourceTree = "<group>"; };
+		A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VM+PresetItem.swift"; sourceTree = "<group>"; };
+		A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset+Defaults.swift"; sourceTree = "<group>"; };
 		A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemButton.swift; sourceTree = "<group>"; };
 		A1A5664724FAD4B30032F9CA /* Selection_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection_VM.swift; sourceTree = "<group>"; };
-		A1ADE71225519044001B59ED /* PresetsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresetsCell.xib; sourceTree = "<group>"; };
 		A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		A1ADE71A25519B62001B59ED /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A1ADE71E25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyWrapper+UserDefaults.swift"; sourceTree = "<group>"; };
@@ -119,7 +129,6 @@
 				A1ADE71925519A4A001B59ED /* Persistence */,
 				A10D2D0F2489541A00923F9E /* Support */,
 				A10D2CF32488FD3D00923F9E /* AppDelegate.swift */,
-				A10D2D07248952DB00923F9E /* AppCoordinator.swift */,
 			);
 			path = MenuRxExample;
 			sourceTree = "<group>";
@@ -167,11 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				A15EC76C2552ED3D004B8C87 /* Preset.swift */,
+				A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */,
 				A1ADE7232551F4FD001B59ED /* Model */,
 				A1ADE7222551F4F1001B59ED /* View */,
 				A15EC7632552E3F6004B8C87 /* Extension */,
 				A16EC88E2551FA5C00248AFC /* PresetCoordinator.swift */,
-				A15EC7642552E42F004B8C87 /* PresetCoordinator+Alerts.swift */,
 			);
 			path = Preset;
 			sourceTree = "<group>";
@@ -180,9 +189,26 @@
 			isa = PBXGroup;
 			children = (
 				A185BD03254DF7770057F2DB /* PresetsCell.swift */,
-				A1ADE71225519044001B59ED /* PresetsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A192A0F625AA0E5400E7EA9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A10D2CF72488FD3D00923F9E /* Menu_VC.swift */,
+				A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */,
+				A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A192A10725AA1D5600E7EA9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A10D2D102489567D00923F9E /* Menu_VM.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A1ADE71925519A4A001B59ED /* Persistence */ = {
@@ -199,6 +225,8 @@
 			children = (
 				A185BD02254DF7440057F2DB /* Cell */,
 				A185BCF4254DC1F30057F2DB /* Preset_VC.swift */,
+				A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */,
+				A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */,
 				A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */,
 			);
 			path = View;
@@ -208,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				A185BCF8254DC2200057F2DB /* Preset_VM.swift */,
+				A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +246,7 @@
 			children = (
 				A15EC73C2552B3D4004B8C87 /* Rx */,
 				A185BD12254DFE610057F2DB /* Date+Ext.swift */,
+				A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -235,9 +265,10 @@
 			isa = PBXGroup;
 			children = (
 				A10D2D0B2489536C00923F9E /* Menu.swift */,
-				A10D2CF72488FD3D00923F9E /* Menu_VC.swift */,
-				A10D2D102489567D00923F9E /* Menu_VM.swift */,
-				A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */,
+				A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */,
+				A192A10725AA1D5600E7EA9D /* Model */,
+				A192A0F625AA0E5400E7EA9D /* View */,
+				A10D2D07248952DB00923F9E /* MenuCoordinator.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -310,7 +341,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1ADE71325519044001B59ED /* PresetsCell.xib in Resources */,
 				A10D2D002488FD4000923F9E /* LaunchScreen.storyboard in Resources */,
 				A10D2CFD2488FD4000923F9E /* Assets.xcassets in Resources */,
 			);
@@ -366,21 +396,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10D2CF82488FD3D00923F9E /* Menu_VC.swift in Sources */,
-				A10D2D08248952DC00923F9E /* AppCoordinator.swift in Sources */,
+				A10D2D08248952DC00923F9E /* MenuCoordinator.swift in Sources */,
 				A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */,
 				A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */,
+				A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */,
 				A185BCF9254DC2200057F2DB /* Preset_VM.swift in Sources */,
 				A1ADE71B25519B62001B59ED /* StorageService.swift in Sources */,
 				A10D2D0A2489531900923F9E /* Observable+Extension.swift in Sources */,
 				A16EC88F2551FA5C00248AFC /* PresetCoordinator.swift in Sources */,
+				A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */,
 				A185BD04254DF7770057F2DB /* PresetsCell.swift in Sources */,
-				A15EC7652552E42F004B8C87 /* PresetCoordinator+Alerts.swift in Sources */,
+				A15EC7652552E42F004B8C87 /* Preset_VC+Alerts.swift in Sources */,
+				A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */,
 				A15EC76D2552ED3D004B8C87 /* Preset.swift in Sources */,
+				A192A10325AA17BD00E7EA9D /* Preset+Defaults.swift in Sources */,
 				A185BCF5254DC1F30057F2DB /* Preset_VC.swift in Sources */,
 				A10D2D112489567D00923F9E /* Menu_VM.swift in Sources */,
 				A185BD13254DFE610057F2DB /* Date+Ext.swift in Sources */,
 				A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */,
+				A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */,
 				A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */,
+				A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */,
 				A10D2D0E248953AA00923F9E /* Selection_VC.swift in Sources */,
 				A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */,
 				A10D2CF42488FD3D00923F9E /* AppDelegate.swift in Sources */,
