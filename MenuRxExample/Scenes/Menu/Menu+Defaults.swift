@@ -10,7 +10,8 @@ import UIKit
 
 // item that is selected on start of the app
 extension Menu.ItemEnum {
-    static let defaultItem: Menu.ItemEnum = .preset
+    static
+    let defaultItem: Menu.ItemEnum = .preset
 }
 
 extension Menu.ItemEnum {
@@ -18,6 +19,13 @@ extension Menu.ItemEnum {
         switch self {
         case .preset: return true
         default: return false
+        }
+    }
+    
+    func getCoordinator(with view: UISplitViewController) -> DetailCoordinatorProtocol? {
+        switch self {
+        case .preset: return PresetCoordinator(splitView: view)
+        default: return nil
         }
     }
 }

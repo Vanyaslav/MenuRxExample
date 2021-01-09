@@ -27,9 +27,8 @@ class MenuCoordinator {
         window.makeKeyAndVisible()
         
         context.itemSelected
-            .filter{ $0.isDeployed }
-            .map{ _ in sv }
-            .map(PresetCoordinator.init)
+            .map{ $0.getCoordinator(with: sv) }
+            .unwrap()
             .subscribe()
             .disposed(by: disposeBag)
 

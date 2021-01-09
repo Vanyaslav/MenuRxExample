@@ -9,7 +9,8 @@
 import UIKit
 
 extension PresetsCell {
-    static let identifier: String = "PresetsCell"
+    static
+    let identifier: String = "PresetsCell"
 }
 
 class PresetsCell: UITableViewCell {

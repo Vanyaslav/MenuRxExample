@@ -9,10 +9,15 @@
 import UIKit
 import RxSwift
 
-class PresetCoordinator {
+protocol DetailCoordinatorProtocol {
+    init(splitView: UISplitViewController)
+}
+
+class PresetCoordinator: DetailCoordinatorProtocol {
     private
     let disposeBag = CompositeDisposable()
     
+    required
     init(splitView: UISplitViewController) {
         let context = Preset.Context()
         let presetsView = Preset_VC(viewModel: Preset_VM(context: context))

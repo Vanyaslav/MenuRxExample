@@ -14,11 +14,9 @@ extension Preset_VC {
         let alert = UIAlertController(title: "Preset " + "\(name)",
                                       message: "can be loaded!!",
                                       preferredStyle: .alert)
-        
         alert.addAction(UIAlertAction(title: "Cancel",
                                       style: .cancel,
                                       handler: nil))
-        
         present(alert, animated: true, completion: nil)
     }
     
@@ -39,12 +37,10 @@ extension Preset_VC {
                                             return
                                         }
                                         context.storePreset.onNext(title)
-                                      })
-                        )
+                                      }))
         alert.addAction(UIAlertAction(title: "Cancel",
                                       style: .cancel,
                                       handler: nil))
-        
         present(alert, animated: true, completion: nil)
     }
 }
