@@ -11,8 +11,8 @@ import UIKit
 extension Menu.ItemEnum {
     /// selected item when the app starts
     static
-    let defaultItem: Menu.ItemEnum = .info
-    
+    let defaultItem: Menu.ItemEnum = .preset
+    /// control items of the menu
     static
     let controlItems = Menu.ItemEnum
         .allCases
@@ -20,11 +20,13 @@ extension Menu.ItemEnum {
 }
 
 extension Menu.ItemEnum {
-    func getCoordinator(with view: UISplitViewController) -> DetailCoordinatorProtocol {
+    func getCoordinator(with vc: UISplitViewController) -> DetailCoordinatorProtocol {
+        let nc = UINavigationController()
         switch self {
-        case .preset: return PresetCoordinator(splitView: view)
-        case .info: return InfoCoordinator(splitView: view)
-        default: return SelectionCoordinator(splitView: view, item: self)
+        case .preset: return PresetCoordinator(controller: vc, nc: nc)
+            // No navigation Bar for splited view iPhone Max, iPad
+        case .info: return InfoCoordinator(controller: vc)
+        default: return SelectionCoordinator(controller: vc, nc: nc, item: self)
         }
     }
 }

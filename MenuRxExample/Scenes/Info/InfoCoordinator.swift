@@ -9,9 +9,9 @@
 import UIKit
 
 class InfoCoordinator: DetailCoordinatorProtocol {
-    required init(splitView: UISplitViewController, item: Menu.ItemEnum? = nil) {
-        let infoView = Info_VC()
-        let nc = UINavigationController(rootViewController: infoView)
-        splitView.showDetailViewController(nc, sender: nil)
+    required init(controller: UIViewController,
+                  nc: UINavigationController? = nil,
+                  item: Menu.ItemEnum? = nil) {
+        controller.manageChild(with: Info_VC(), nc: nc)
     }
 }

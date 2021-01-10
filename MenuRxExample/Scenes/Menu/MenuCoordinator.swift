@@ -23,7 +23,7 @@ class MenuCoordinator: AppCoordinator {
         
         window.rootViewController = sv
         window.makeKeyAndVisible()
-        
+
         context.itemSelected
             .map{ $0.getCoordinator(with: sv) }
             .subscribe()

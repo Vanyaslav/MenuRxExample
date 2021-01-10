@@ -48,6 +48,10 @@ class Selection_VC: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         super.loadView()
         
@@ -60,9 +64,5 @@ class Selection_VC: UIViewController {
             button.centerYAnchor
                 .constraint(equalTo: view.centerYAnchor)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

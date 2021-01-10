@@ -10,22 +10,22 @@ import UIKit
 import RxSwift
 
 class PresetCoordinator: DetailCoordinator {
-    required
-    init(splitView: UISplitViewController, item: Menu.ItemEnum? = nil) {
+    required init(controller: UIViewController,
+                  nc: UINavigationController?,
+                  item: Menu.ItemEnum? = nil) {
         super.init()
         let context = Preset.Context()
-        let presetsView = Preset_VC(viewModel: Preset_VM(context: context))
-        let nc = UINavigationController(rootViewController: presetsView)
-        splitView.showDetailViewController(nc, sender: nil)
+        let vc = Preset_VC(viewModel: Preset_VM(context: context))
+        controller.manageChild(with: vc, nc: nc)
         
         context.showPresetInfoAlert
-            .map(presetsView.showPresetAlert)
+            .map(vc.showPresetAlert)
             .subscribe()
             .disposed(by: disposeBag)
         
         context.showCreatePresetAlert
             .map{ context }
-            .map(presetsView.showCreatePresetAlert)
+            .map(vc.showCreatePresetAlert)
             .subscribe()
             .disposed(by: disposeBag)
         

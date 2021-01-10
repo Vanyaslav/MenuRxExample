@@ -32,6 +32,7 @@
 		A1904E9225AAF84D003C510D /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9125AAF84D003C510D /* InfoCoordinator.swift */; };
 		A1904E9525AAFC4F003C510D /* Info_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9425AAFC4F003C510D /* Info_VC.swift */; };
 		A1904E9825AB012E003C510D /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */; };
+		A1904E9E25AB6100003C510D /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */; };
 		A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */; };
 		A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */; };
 		A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */; };
@@ -74,6 +75,7 @@
 		A1904E9125AAF84D003C510D /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
 		A1904E9425AAFC4F003C510D /* Info_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info_VC.swift; sourceTree = "<group>"; };
 		A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+LoadView.swift"; sourceTree = "<group>"; };
 		A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Defaults.swift"; sourceTree = "<group>"; };
@@ -207,8 +209,8 @@
 		A1904E9025AAF824003C510D /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				A1904E9125AAF84D003C510D /* InfoCoordinator.swift */,
 				A1904E9425AAFC4F003C510D /* Info_VC.swift */,
+				A1904E9125AAF84D003C510D /* InfoCoordinator.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -268,6 +270,7 @@
 				A185BD12254DFE610057F2DB /* Date+Ext.swift */,
 				A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */,
 				A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */,
+				A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -276,8 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				A1904E9025AAF824003C510D /* Info */,
-				A185BCF3254DC1BA0057F2DB /* Preset */,
 				A10ECC3324FADF2E009AD323 /* Selection */,
+				A185BCF3254DC1BA0057F2DB /* Preset */,
 				A1D0B1BC2496B155003CFFE4 /* Menu */,
 				A1A35D6425AAB744008F245D /* AppCoordinator.swift */,
 			);
@@ -444,6 +447,7 @@
 				A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */,
 				A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */,
 				A1904E9525AAFC4F003C510D /* Info_VC.swift in Sources */,
+				A1904E9E25AB6100003C510D /* UIViewController+Ext.swift in Sources */,
 				A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */,
 				A10D2D0E248953AA00923F9E /* Selection_VC.swift in Sources */,
 				A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */,

@@ -11,7 +11,7 @@ import RxSwift
 typealias DetailCoordinator = AppCoordinator & DetailCoordinatorProtocol
 
 protocol DetailCoordinatorProtocol {
-    init(splitView: UISplitViewController, item: Menu.ItemEnum?)
+    init(controller: UIViewController, nc: UINavigationController?, item: Menu.ItemEnum?)
 }
 
 class AppCoordinator {

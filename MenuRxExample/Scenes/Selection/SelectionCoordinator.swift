@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import RxSwift
 
 class SelectionCoordinator: DetailCoordinatorProtocol {    
-    required
-    init(splitView: UISplitViewController, item: Menu.ItemEnum?) {
+    required init(controller: UIViewController,
+                  nc: UINavigationController?,
+                  item: Menu.ItemEnum?) {
         guard let menuItem = item else { return }
-        let vc = Selection_VC(with: Selection_VM(with: menuItem))
-        let nc = UINavigationController(rootViewController: vc)
-        splitView.showDetailViewController(nc, sender: nil)
+        let vc = Selection_VC(with: Selection_VM(with: menuItem))        
+        controller.manageChild(with: vc, nc: nc)
     }
 }
