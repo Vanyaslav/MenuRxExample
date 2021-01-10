@@ -9,16 +9,10 @@
 import UIKit
 import RxSwift
 
-protocol DetailCoordinatorProtocol {
-    init(splitView: UISplitViewController)
-}
-
-class PresetCoordinator: DetailCoordinatorProtocol {
-    private
-    let disposeBag = CompositeDisposable()
-    
+class PresetCoordinator: AppCoordinator, DetailCoordinatorProtocol {
     required
-    init(splitView: UISplitViewController) {
+    init(splitView: UISplitViewController, item: Menu.ItemEnum? = nil) {
+        super.init()
         let context = Preset.Context()
         let presetsView = Preset_VC(viewModel: Preset_VM(context: context))
         let nc = UINavigationController(rootViewController: presetsView)

@@ -17,19 +17,15 @@ class Preset_VC: UIViewController {
         tv.translatesAutoresizingMaskIntoConstraints = false
         // tv.rowHeight = 54
         tv.allowsSelection = true
-        
         tv.register(PresetsCell.self,
                     forCellReuseIdentifier: PresetsCell.identifier)
-        
         tv.rx
             .setDelegate(self)
             .disposed(by: disposeBag)
-        
         tv.rx
             .modelSelected(Preset_VM.PresetItem.self)
             .bind(to: viewModel.modelPressed)
             .disposed(by: disposeBag)
-        
         tv.rx
             .modelDeleted(Preset_VM.PresetItem.self)
             .bind(to: viewModel.modelDeleted)
@@ -43,11 +39,7 @@ class Preset_VC: UIViewController {
             cell.set(item: item)
             return cell
         })
-        
-//        dataSource.titleForHeaderInSection = { dataSource, section in
-//            dataSource.sectionModels[section].identity.title
-//        }
-              
+          
         dataSource.canEditRowAtIndexPath = { dataSource, indexPath in
             Preset.TypeEnum(rawValue: indexPath.section) == .user
         }

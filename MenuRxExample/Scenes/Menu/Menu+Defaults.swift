@@ -15,17 +15,10 @@ extension Menu.ItemEnum {
 }
 
 extension Menu.ItemEnum {
-    var isDeployed: Bool {
-        switch self {
-        case .preset: return true
-        default: return false
-        }
-    }
-    
-    func getCoordinator(with view: UISplitViewController) -> DetailCoordinatorProtocol? {
+    func getCoordinator(with view: UISplitViewController) -> DetailCoordinatorProtocol {
         switch self {
         case .preset: return PresetCoordinator(splitView: view)
-        default: return nil
+        default: return SelectionCoordinator(splitView: view, item: self)
         }
     }
 }

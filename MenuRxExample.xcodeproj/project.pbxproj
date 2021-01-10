@@ -35,6 +35,8 @@
 		A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */; };
 		A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */; };
 		A192A10325AA17BD00E7EA9D /* Preset+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */; };
+		A1A35D6125AAB23B008F245D /* SelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35D6025AAB23B008F245D /* SelectionCoordinator.swift */; };
+		A1A35D6525AAB744008F245D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35D6425AAB744008F245D /* AppCoordinator.swift */; };
 		A1A5664624FAD1C80032F9CA /* MenuItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */; };
 		A1A5664824FAD4B30032F9CA /* Selection_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664724FAD4B30032F9CA /* Selection_VM.swift */; };
 		A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */; };
@@ -72,6 +74,8 @@
 		A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu_VC+LoadView.swift"; sourceTree = "<group>"; };
 		A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VM+PresetItem.swift"; sourceTree = "<group>"; };
 		A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset+Defaults.swift"; sourceTree = "<group>"; };
+		A1A35D6025AAB23B008F245D /* SelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCoordinator.swift; sourceTree = "<group>"; };
+		A1A35D6425AAB744008F245D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemButton.swift; sourceTree = "<group>"; };
 		A1A5664724FAD4B30032F9CA /* Selection_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection_VM.swift; sourceTree = "<group>"; };
 		A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			children = (
 				A10D2D0D248953AA00923F9E /* Selection_VC.swift */,
 				A1A5664724FAD4B30032F9CA /* Selection_VM.swift */,
+				A1A35D6025AAB23B008F245D /* SelectionCoordinator.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				A185BCF3254DC1BA0057F2DB /* Preset */,
 				A10ECC3324FADF2E009AD323 /* Selection */,
 				A1D0B1BC2496B155003CFFE4 /* Menu */,
+				A1A35D6425AAB744008F245D /* AppCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */,
 				A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */,
 				A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */,
+				A1A35D6125AAB23B008F245D /* SelectionCoordinator.swift in Sources */,
 				A185BCF9254DC2200057F2DB /* Preset_VM.swift in Sources */,
 				A1ADE71B25519B62001B59ED /* StorageService.swift in Sources */,
 				A10D2D0A2489531900923F9E /* Observable+Extension.swift in Sources */,
@@ -414,6 +421,7 @@
 				A10D2D112489567D00923F9E /* Menu_VM.swift in Sources */,
 				A185BD13254DFE610057F2DB /* Date+Ext.swift in Sources */,
 				A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */,
+				A1A35D6525AAB744008F245D /* AppCoordinator.swift in Sources */,
 				A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */,
 				A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */,
 				A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */,

@@ -9,11 +9,9 @@
 import UIKit
 import RxSwift
 
-class MenuCoordinator {
-    private
-    let disposeBag = DisposeBag()
-    
+class MenuCoordinator: AppCoordinator {
     init(with window: UIWindow) {
+        super.init()
         let context = Menu.Context()
         let model = Menu_VM(context: context)
         let menu = Menu_VC(viewModel: model)
@@ -28,16 +26,11 @@ class MenuCoordinator {
         
         context.itemSelected
             .map{ $0.getCoordinator(with: sv) }
-            .unwrap()
             .subscribe()
             .disposed(by: disposeBag)
-
-        context.itemSelected
-            .filter{ !$0.isDeployed }
-            .subscribe(onNext:{ item in
-                let vc = Selection_VC(with: Selection_VM(with: item))
-                let nc = UINavigationController(rootViewController: vc)
-                sv.showDetailViewController(nc, sender: nil) })
-            .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        disposeBag.dispose()
     }
 }
