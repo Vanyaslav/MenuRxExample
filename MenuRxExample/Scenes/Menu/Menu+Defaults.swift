@@ -9,9 +9,14 @@
 import UIKit
 
 extension Menu.ItemEnum {
-    /// item that is selected on start of the app
+    /// selected item when the app starts
     static
     let defaultItem: Menu.ItemEnum = .info
+    
+    static
+    let controlItems = Menu.ItemEnum
+        .allCases
+        .map{ MenuItemButton(text: $0.title, tag: $0.rawValue) }
 }
 
 extension Menu.ItemEnum {

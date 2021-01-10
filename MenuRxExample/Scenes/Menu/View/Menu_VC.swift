@@ -18,13 +18,10 @@ class Menu_VC: UIViewController {
             sv.distribution = .fillEqually
             sv.axis = .vertical
             sv.spacing = 2
-        // buttons
-        let items = Menu.ItemEnum
-            .allCases
-            .map{ MenuItemButton(text: $0.title, tag: $0.rawValue) }
         
-        items.forEach(sv.addArrangedSubview)
-        //
+        let items = Menu.ItemEnum.controlItems
+            items.forEach(sv.addArrangedSubview)
+        
         func makeMutuallyExclusive(with selection: Int) {
             items.map{ $0.tag == selection }
                 .enumerated()
