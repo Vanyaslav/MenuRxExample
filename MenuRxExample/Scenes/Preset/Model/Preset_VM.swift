@@ -30,7 +30,6 @@ class Preset_VM {
         let userPresetModels = Observable
             .merge(didLoad, reloadData)
             .flatMap(service.readPresets)
-            .map{ $0.parsePresets() }
             .map{ SectionModel(model: .user, items: $0) }
         
         let factoryPresetModels = Observable
@@ -48,8 +47,6 @@ class Preset_VM {
             .disposed(by: disposeBag)
         
         context.storePreset
-            .map{ [$0, Date().asString(style: .medium)] }
-            .map{ $0.concatPresetData() }
             .map(service.update)
             .bind(to: reloadData)
             .disposed(by: disposeBag)
@@ -60,8 +57,6 @@ class Preset_VM {
             .disposed(by: disposeBag)
         
         modelDeleted
-            .map{ [$0.title, $0.date] }
-            .map{ $0.concatPresetData() }
             .map(service.delete)
             .bind(to: reloadData)
             .disposed(by: disposeBag)

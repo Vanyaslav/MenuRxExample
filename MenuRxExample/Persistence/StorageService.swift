@@ -15,21 +15,24 @@ class StorageService {
 
 // user presets
 extension StorageService {
-    func update(with newPreset: String) {
-        userPresets.append(newPreset)
+    func update(with presetName: String) {
+        let item = [presetName, Date().asString(style: .medium)].concatPresetData()
+        userPresets.append(item)
     }
     
-    func delete(preset: String) {
-        guard let index = userPresets.firstIndex(of: preset) else { return }
+    func delete(preset: Preset_VM.PresetItem) {
+        let item = [preset.title, preset.date].concatPresetData()
+        guard let index = userPresets.firstIndex(of: item) else { return }
         userPresets.remove(at: index)
     }
 }
 
 // Rx
 extension StorageService {
-    func readPresets() -> Observable<[String]> {
+    func readPresets() -> Observable<[Preset_VM.PresetItem]> {
         return Observable
             .from(optional: userPresets)
+            .map{ $0.parsePresets() }
             .asObservable()
     }
 }
