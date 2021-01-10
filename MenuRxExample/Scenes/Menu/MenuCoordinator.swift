@@ -29,8 +29,4 @@ class MenuCoordinator: AppCoordinator {
             .subscribe()
             .disposed(by: disposeBag)
     }
-    
-    deinit {
-        disposeBag.dispose()
-    }
 }

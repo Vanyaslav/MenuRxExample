@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class PresetCoordinator: AppCoordinator, DetailCoordinatorProtocol {
+class PresetCoordinator: DetailCoordinator {
     required
     init(splitView: UISplitViewController, item: Menu.ItemEnum? = nil) {
         super.init()

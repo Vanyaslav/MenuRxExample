@@ -8,10 +8,17 @@
 
 import RxSwift
 
+typealias DetailCoordinator = AppCoordinator & DetailCoordinatorProtocol
+
 protocol DetailCoordinatorProtocol {
     init(splitView: UISplitViewController, item: Menu.ItemEnum?)
 }
 
 class AppCoordinator {
     let disposeBag = CompositeDisposable()
+    
+    deinit {
+        guard !disposeBag.isDisposed else { return }
+        disposeBag.dispose()
+    }
 }
