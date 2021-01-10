@@ -59,4 +59,12 @@ class Menu_VC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func loadView() {
+        super.loadView()
+        self.view.backgroundColor = .systemGray
+        
+        self.view.addSubview(menuView)
+        menuView.fitScreen(with: view)
+    }
 }

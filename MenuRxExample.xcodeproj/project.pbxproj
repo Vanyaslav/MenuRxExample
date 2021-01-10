@@ -33,10 +33,8 @@
 		A1904E9525AAFC4F003C510D /* Info_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9425AAFC4F003C510D /* Info_VC.swift */; };
 		A1904E9825AB012E003C510D /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */; };
 		A1904E9E25AB6100003C510D /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */; };
-		A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */; };
 		A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */; };
 		A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */; };
-		A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */; };
 		A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */; };
 		A192A10325AA17BD00E7EA9D /* Preset+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */; };
 		A1A35D6125AAB23B008F245D /* SelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35D6025AAB23B008F245D /* SelectionCoordinator.swift */; };
@@ -76,10 +74,8 @@
 		A1904E9425AAFC4F003C510D /* Info_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info_VC.swift; sourceTree = "<group>"; };
 		A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+LoadView.swift"; sourceTree = "<group>"; };
 		A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Defaults.swift"; sourceTree = "<group>"; };
-		A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu_VC+LoadView.swift"; sourceTree = "<group>"; };
 		A192A0F725AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VM+PresetItem.swift"; sourceTree = "<group>"; };
 		A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset+Defaults.swift"; sourceTree = "<group>"; };
 		A1A35D6025AAB23B008F245D /* SelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCoordinator.swift; sourceTree = "<group>"; };
@@ -219,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				A10D2CF72488FD3D00923F9E /* Menu_VC.swift */,
-				A192A0F325AA0D3E00E7EA9D /* Menu_VC+LoadView.swift */,
 				A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */,
 			);
 			path = View;
@@ -247,7 +242,6 @@
 			children = (
 				A185BD02254DF7440057F2DB /* Cell */,
 				A185BCF4254DC1F30057F2DB /* Preset_VC.swift */,
-				A192A0E925A9C58500E7EA9D /* Preset_VC+LoadView.swift */,
 				A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */,
 				A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */,
 			);
@@ -425,7 +419,6 @@
 				A10D2D08248952DC00923F9E /* MenuCoordinator.swift in Sources */,
 				A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */,
 				A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */,
-				A192A0F425AA0D3E00E7EA9D /* Menu_VC+LoadView.swift in Sources */,
 				A1A35D6125AAB23B008F245D /* SelectionCoordinator.swift in Sources */,
 				A1904E9825AB012E003C510D /* UIView+NSLayoutConstraint.swift in Sources */,
 				A185BCF9254DC2200057F2DB /* Preset_VM.swift in Sources */,
@@ -444,7 +437,6 @@
 				A185BD13254DFE610057F2DB /* Date+Ext.swift in Sources */,
 				A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */,
 				A1A35D6525AAB744008F245D /* AppCoordinator.swift in Sources */,
-				A192A0EA25A9C58500E7EA9D /* Preset_VC+LoadView.swift in Sources */,
 				A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */,
 				A1904E9525AAFC4F003C510D /* Info_VC.swift in Sources */,
 				A1904E9E25AB6100003C510D /* UIViewController+Ext.swift in Sources */,

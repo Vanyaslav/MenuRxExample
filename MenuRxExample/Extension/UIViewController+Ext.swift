@@ -19,6 +19,8 @@ extension UIViewController {
             } else {
                 controller.showDetailViewController(vc, sender: nil)
             }
+        } else {
+            print("Solution with controller: \(self) not implemented!")
         }
     }
 }

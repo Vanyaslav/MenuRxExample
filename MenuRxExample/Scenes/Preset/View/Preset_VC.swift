@@ -19,15 +19,12 @@ class Preset_VC: UIViewController {
         tv.allowsSelection = true
         tv.register(PresetsCell.self,
                     forCellReuseIdentifier: PresetsCell.identifier)
-        tv.rx
-            .setDelegate(self)
+        tv.rx.setDelegate(self)
             .disposed(by: disposeBag)
-        tv.rx
-            .modelSelected(Preset_VM.PresetItem.self)
+        tv.rx.modelSelected(Preset_VM.PresetItem.self)
             .bind(to: viewModel.modelPressed)
             .disposed(by: disposeBag)
-        tv.rx
-            .modelDeleted(Preset_VM.PresetItem.self)
+        tv.rx.modelDeleted(Preset_VM.PresetItem.self)
             .bind(to: viewModel.modelDeleted)
             .disposed(by: disposeBag)
                
@@ -86,8 +83,27 @@ class Preset_VC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let editButtonItem = navigationItem.rightBarButtonItem else { return }
+        
+        viewModel.isEditingAllowed
+            .drive(editButtonItem.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tableView.setEditing((editing && !tableView.isEditing), animated: true)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.titleView = addPresetButton
+        
+        view.addSubview(tableView)
+        tableView.fitScreen(with: view)
     }
 }

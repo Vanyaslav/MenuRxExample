@@ -19,6 +19,7 @@ class Preset_VM {
     let modelDeleted = PublishSubject<PresetItem>()
     /// out
     let loadTable: Driver<[SectionModel]>
+    let isEditingAllowed: Driver<Bool>
     
     private
     let disposeBag = DisposeBag()
@@ -40,6 +41,11 @@ class Preset_VM {
             .combineLatest(factoryPresetModels,
                            userPresetModels)
             .map{ [$0, $1] }
+            .asDriver()
+        
+        isEditingAllowed = userPresetModels
+            .filter{ $0.model == .user }
+            .map{ $0.items.count > 0 }
             .asDriver()
         
         showAlert
