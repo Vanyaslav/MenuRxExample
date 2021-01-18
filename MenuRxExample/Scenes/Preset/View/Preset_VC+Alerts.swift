@@ -9,17 +9,7 @@
 import UIKit
 
 // Alerts
-extension Preset_VC {
-    func showPresetAlert(with name: String) {
-        let alert = UIAlertController(title: "Preset " + "\(name)",
-                                      message: "can be loaded!!",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel",
-                                      style: .cancel,
-                                      handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
+extension Preset_VC {    
     func showCreatePresetAlert(with context: Preset.Context) {
         let alert = UIAlertController(title: nil,
                                       message: "Create a new preset:",

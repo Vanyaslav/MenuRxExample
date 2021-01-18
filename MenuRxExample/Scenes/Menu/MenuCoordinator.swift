@@ -17,16 +17,14 @@ class MenuCoordinator: AppCoordinator {
         let menu = Menu_VC(viewModel: model)
         let rootView = UINavigationController(rootViewController: menu)
         
-        let sv = UISplitViewController()
-        sv.preferredDisplayMode = .allVisible
-        sv.viewControllers = [rootView]
+        let splitViewController = UISplitViewController(rootViewController: rootView)
         
-        window.rootViewController = sv
-        window.makeKeyAndVisible()
-
         context.itemSelected
-            .map{ $0.getCoordinator(with: sv) }
+            .map{ $0.getCoordinator(with: splitViewController) }
             .subscribe()
             .disposed(by: disposeBag)
+        
+        window.rootViewController = splitViewController
+        window.makeKeyAndVisible()
     }
 }

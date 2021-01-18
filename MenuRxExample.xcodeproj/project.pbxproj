@@ -17,6 +17,8 @@
 		A10D2D0C2489536C00923F9E /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D0B2489536C00923F9E /* Menu.swift */; };
 		A10D2D0E248953AA00923F9E /* Selection_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D0D248953AA00923F9E /* Selection_VC.swift */; };
 		A10D2D112489567D00923F9E /* Menu_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D102489567D00923F9E /* Menu_VM.swift */; };
+		A11A8EA525B003B600514033 /* UISplitViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */; };
+		A11A8EAA25B00E1D00514033 /* PresetDetail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */; };
 		A15EC73E2552B3E9004B8C87 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */; };
 		A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7412552B433004B8C87 /* Disposable+Ext.swift */; };
 		A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */; };
@@ -58,6 +60,8 @@
 		A10D2D0B2489536C00923F9E /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		A10D2D0D248953AA00923F9E /* Selection_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection_VC.swift; sourceTree = "<group>"; };
 		A10D2D102489567D00923F9E /* Menu_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_VM.swift; sourceTree = "<group>"; };
+		A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISplitViewController+Ext.swift"; sourceTree = "<group>"; };
+		A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDetail_VC.swift; sourceTree = "<group>"; };
 		A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		A15EC7412552B433004B8C87 /* Disposable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disposable+Ext.swift"; sourceTree = "<group>"; };
 		A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Ext.swift"; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 			path = Selection;
 			sourceTree = "<group>";
 		};
+		A11A8EA825B00DFC00514033 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		A15EC73C2552B3D4004B8C87 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +252,7 @@
 		A1ADE7222551F4F1001B59ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A11A8EA825B00DFC00514033 /* Detail */,
 				A185BD02254DF7440057F2DB /* Cell */,
 				A185BCF4254DC1F30057F2DB /* Preset_VC.swift */,
 				A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */,
@@ -265,6 +278,7 @@
 				A192A0EC25A9CEB900E7EA9D /* UILabel+Ext.swift */,
 				A1904E9725AB012E003C510D /* UIView+NSLayoutConstraint.swift */,
 				A1904E9D25AB6100003C510D /* UIViewController+Ext.swift */,
+				A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -438,8 +452,10 @@
 				A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */,
 				A1A35D6525AAB744008F245D /* AppCoordinator.swift in Sources */,
 				A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */,
+				A11A8EA525B003B600514033 /* UISplitViewController+Ext.swift in Sources */,
 				A1904E9525AAFC4F003C510D /* Info_VC.swift in Sources */,
 				A1904E9E25AB6100003C510D /* UIViewController+Ext.swift in Sources */,
+				A11A8EAA25B00E1D00514033 /* PresetDetail_VC.swift in Sources */,
 				A192A0F825AA0F3C00E7EA9D /* Preset_VM+PresetItem.swift in Sources */,
 				A10D2D0E248953AA00923F9E /* Selection_VC.swift in Sources */,
 				A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */,

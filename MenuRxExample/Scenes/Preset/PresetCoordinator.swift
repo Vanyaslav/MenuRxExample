@@ -10,17 +10,20 @@ import UIKit
 import RxSwift
 
 class PresetCoordinator: DetailCoordinator {
+    private
+    let navigation: UINavigationController?
+    
     required init(controller: UIViewController,
                   nc: UINavigationController?,
                   item: Menu.ItemEnum? = nil) {
+        self.navigation = nc
         super.init()
         let context = Preset.Context()
         let vc = Preset_VC(viewModel: Preset_VM(context: context))
-        controller.manageChild(with: vc, nc: nc)
+        controller.manageChild(with: vc, nc: navigation)
         
-        context.showPresetInfoAlert
-            .map(vc.showPresetAlert)
-            .subscribe()
+        context.showPresetInfo
+            .subscribeNext(weak: self, PresetCoordinator.showPresetDetails)
             .disposed(by: disposeBag)
         
         context.showCreatePresetAlert
@@ -31,6 +34,20 @@ class PresetCoordinator: DetailCoordinator {
         
         context.dispose
             .map{ [self] in disposeBag.dispose() }
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+    
+    private
+    func showPresetDetails(with title: String) {
+        let context = PresetDetail.Context()
+        let vc = PresetDetail_VC(viewModel: PresetDetail_VM(title: title,
+                                                            context: context))
+        vc.modalTransitionStyle = .flipHorizontal
+        navigation?.present(vc, animated: true, completion: nil)
+        
+        context.showAlert
+            .map(vc.showPresetAlert)
             .subscribe()
             .disposed(by: disposeBag)
     }

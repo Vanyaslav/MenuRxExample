@@ -29,7 +29,7 @@ class Preset {
     class Context {
         // out
         let showCreatePresetAlert = PublishSubject<Void>()
-        let showPresetInfoAlert = PublishSubject<String>()
+        let showPresetInfo = PublishSubject<String>()
         let dispose = PublishSubject<Void>()
         // in
         let storePreset = PublishSubject<String>()

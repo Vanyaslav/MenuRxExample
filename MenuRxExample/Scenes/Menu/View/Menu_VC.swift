@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class Menu_VC: UIViewController {
-    lazy
+    private lazy
     var menuView: UIStackView = {
         let sv = UIStackView()
             sv.translatesAutoresizingMaskIntoConstraints = false

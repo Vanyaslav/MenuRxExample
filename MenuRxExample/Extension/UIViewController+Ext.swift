@@ -8,6 +8,7 @@
 
 import UIKit
 
+// self as a managing controller
 extension UIViewController {
     func manageChild(with vc: UIViewController,
                      nc: UINavigationController?) {

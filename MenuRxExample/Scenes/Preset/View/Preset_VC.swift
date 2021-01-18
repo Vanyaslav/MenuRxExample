@@ -74,7 +74,8 @@ class Preset_VC: UIViewController {
             .disposed(by: disposeBag)
         
         rx.viewDidDisappear
-            .map{_ in }
+            .debug()
+            .map{ _ in }
             .bind(to: viewModel.didClose)
             .disposed(by: disposeBag)
     }
@@ -86,7 +87,8 @@ class Preset_VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let editButtonItem = navigationItem.rightBarButtonItem else { return }
+        guard let editButtonItem = navigationItem
+                .rightBarButtonItem else { return }
         
         viewModel.isEditingAllowed
             .drive(editButtonItem.rx.isEnabled)
@@ -95,7 +97,8 @@ class Preset_VC: UIViewController {
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        tableView.setEditing((editing && !tableView.isEditing), animated: true)
+        tableView.setEditing((editing && !tableView.isEditing),
+                             animated: true)
     }
     
     override func loadView() {

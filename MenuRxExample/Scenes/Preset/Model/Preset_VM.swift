@@ -59,7 +59,7 @@ class Preset_VM {
         
         modelPressed
             .map{ $0.title }
-            .bind(to: context.showPresetInfoAlert)
+            .bind(to: context.showPresetInfo)
             .disposed(by: disposeBag)
         
         modelDeleted
