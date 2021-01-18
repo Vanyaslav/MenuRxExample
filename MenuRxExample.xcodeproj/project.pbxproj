@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		131ACCF7ECA4D9B6A4E1864F /* Pods_MenuRxExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF830700AD8FD453E084BD1 /* Pods_MenuRxExample.framework */; };
+		A1063ADD25B52A58008C19D7 /* PresetDetail_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1063ADC25B52A58008C19D7 /* PresetDetail_VM.swift */; };
+		A1063AE025B52BB6008C19D7 /* PresetDetail_VC+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1063ADF25B52BB6008C19D7 /* PresetDetail_VC+Alert.swift */; };
 		A10D2CF42488FD3D00923F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2CF32488FD3D00923F9E /* AppDelegate.swift */; };
 		A10D2CF82488FD3D00923F9E /* Menu_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2CF72488FD3D00923F9E /* Menu_VC.swift */; };
 		A10D2CFD2488FD4000923F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10D2CFC2488FD4000923F9E /* Assets.xcassets */; };
@@ -43,12 +45,14 @@
 		A1A35D6525AAB744008F245D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35D6425AAB744008F245D /* AppCoordinator.swift */; };
 		A1A5664624FAD1C80032F9CA /* MenuItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */; };
 		A1A5664824FAD4B30032F9CA /* Selection_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5664724FAD4B30032F9CA /* Selection_VM.swift */; };
-		A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */; };
+		A1ADE71625519866001B59ED /* Preset_VC+HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71525519866001B59ED /* Preset_VC+HeaderTableView.swift */; };
 		A1ADE71B25519B62001B59ED /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71A25519B62001B59ED /* StorageService.swift */; };
 		A1ADE71F25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ADE71E25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1063ADC25B52A58008C19D7 /* PresetDetail_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDetail_VM.swift; sourceTree = "<group>"; };
+		A1063ADF25B52BB6008C19D7 /* PresetDetail_VC+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresetDetail_VC+Alert.swift"; sourceTree = "<group>"; };
 		A10D2CF02488FD3C00923F9E /* MenuRxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuRxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10D2CF32488FD3D00923F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10D2CF72488FD3D00923F9E /* Menu_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_VC.swift; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		A1A35D6425AAB744008F245D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A1A5664524FAD1C80032F9CA /* MenuItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemButton.swift; sourceTree = "<group>"; };
 		A1A5664724FAD4B30032F9CA /* Selection_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection_VM.swift; sourceTree = "<group>"; };
-		A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		A1ADE71525519866001B59ED /* Preset_VC+HeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+HeaderTableView.swift"; sourceTree = "<group>"; };
 		A1ADE71A25519B62001B59ED /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A1ADE71E25519BBE001B59ED /* PropertyWrapper+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyWrapper+UserDefaults.swift"; sourceTree = "<group>"; };
 		C466E6F288F2B560B2AAB7CE /* Pods-MenuRxExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuRxExample.release.xcconfig"; path = "Target Support Files/Pods-MenuRxExample/Pods-MenuRxExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +172,9 @@
 		A11A8EA825B00DFC00514033 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A1063ADF25B52BB6008C19D7 /* PresetDetail_VC+Alert.swift */,
 				A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */,
+				A1063ADC25B52A58008C19D7 /* PresetDetail_VM.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -256,7 +262,7 @@
 				A185BD02254DF7440057F2DB /* Cell */,
 				A185BCF4254DC1F30057F2DB /* Preset_VC.swift */,
 				A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */,
-				A1ADE71525519866001B59ED /* Preset_VC+UITableViewDelegate.swift */,
+				A1ADE71525519866001B59ED /* Preset_VC+HeaderTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,7 +438,7 @@
 				A10D2CF82488FD3D00923F9E /* Menu_VC.swift in Sources */,
 				A10D2D08248952DC00923F9E /* MenuCoordinator.swift in Sources */,
 				A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */,
-				A1ADE71625519866001B59ED /* Preset_VC+UITableViewDelegate.swift in Sources */,
+				A1ADE71625519866001B59ED /* Preset_VC+HeaderTableView.swift in Sources */,
 				A1A35D6125AAB23B008F245D /* SelectionCoordinator.swift in Sources */,
 				A1904E9825AB012E003C510D /* UIView+NSLayoutConstraint.swift in Sources */,
 				A185BCF9254DC2200057F2DB /* Preset_VM.swift in Sources */,
@@ -463,8 +469,10 @@
 				A15EC74B2552BC59004B8C87 /* Array+Ext.swift in Sources */,
 				A15EC73E2552B3E9004B8C87 /* UIButton+Rx.swift in Sources */,
 				A10D2D0C2489536C00923F9E /* Menu.swift in Sources */,
+				A1063ADD25B52A58008C19D7 /* PresetDetail_VM.swift in Sources */,
 				A1A5664624FAD1C80032F9CA /* MenuItemButton.swift in Sources */,
 				A1A5664824FAD4B30032F9CA /* Selection_VM.swift in Sources */,
+				A1063AE025B52BB6008C19D7 /* PresetDetail_VC+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

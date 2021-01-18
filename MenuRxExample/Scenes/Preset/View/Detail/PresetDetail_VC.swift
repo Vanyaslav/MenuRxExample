@@ -15,28 +15,6 @@ class PresetDetail {
     }
 }
 
-class PresetDetail_VM {
-    // in
-    let viewDidLoad = PublishSubject<Void>()
-    let presentAlert = PublishSubject<Void>()
-    // out
-    let presetTitle: Driver<String>
-    
-    private
-    let disposeBag = DisposeBag()
-    
-    init(title: String, context: PresetDetail.Context) {
-        presetTitle = viewDidLoad
-            .mapTo(title)
-            .asDriver()
-        
-        presentAlert
-            .map{ title }
-            .bind(to: context.showAlert)
-            .disposed(by: disposeBag)
-    }
-}
-
 class PresetDetail_VC: UIViewController {
     private lazy
     var closeButton: UIButton = {
@@ -101,17 +79,5 @@ class PresetDetail_VC: UIViewController {
             infoButton.centerYAnchor
                 .constraint(equalTo: view.centerYAnchor)
         ])
-    }
-}
-
-extension PresetDetail_VC {
-    func showPresetAlert(with name: String) {
-        let alert = UIAlertController(title: "Preset " + "\(name)",
-                                      message: "can be loaded!!",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel",
-                                      style: .cancel,
-                                      handler: nil))
-        present(alert, animated: true, completion: nil)
     }
 }
