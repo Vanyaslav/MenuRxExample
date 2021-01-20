@@ -13,6 +13,7 @@ class PresetDetail_VM {
     // in
     let viewDidLoad = PublishSubject<Void>()
     let presentAlert = PublishSubject<Void>()
+    let viewClosed = PublishSubject<Void>()
     // out
     let presetTitle: Driver<String>
     
@@ -27,6 +28,10 @@ class PresetDetail_VM {
         presentAlert
             .map{ title }
             .bind(to: context.showAlert)
+            .disposed(by: disposeBag)
+        
+        viewClosed
+            .bind(to: context.dispose)
             .disposed(by: disposeBag)
     }
 }

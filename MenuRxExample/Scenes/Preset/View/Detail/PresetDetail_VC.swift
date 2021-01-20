@@ -12,6 +12,7 @@ import RxCocoa
 class PresetDetail {
     class Context {
         let showAlert = PublishSubject<String>()
+        let dispose = PublishSubject<Void>()
     }
 }
 
@@ -50,6 +51,11 @@ class PresetDetail_VC: UIViewController {
         
         rx.viewDidLoad
             .bind(to: viewModel.viewDidLoad)
+            .disposed(by: disposeBag)
+        
+        rx.viewDidDisappear
+            .map{ _ in }
+            .bind(to: viewModel.viewClosed)
             .disposed(by: disposeBag)
     }
     

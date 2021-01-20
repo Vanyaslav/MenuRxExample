@@ -40,15 +40,7 @@ class PresetCoordinator: DetailCoordinator {
     
     private
     func showPresetDetails(with title: String) {
-        let context = PresetDetail.Context()
-        let vc = PresetDetail_VC(viewModel: PresetDetail_VM(title: title,
-                                                            context: context))
-        vc.modalTransitionStyle = .flipHorizontal
-        navigation?.present(vc, animated: true, completion: nil)
-        
-        context.showAlert
-            .map(vc.showPresetAlert)
-            .subscribe()
-            .disposed(by: disposeBag)
+        _ = PresetDetailCoordinator(with: title,
+                                    navigation: navigation ?? UINavigationController())
     }
 }
