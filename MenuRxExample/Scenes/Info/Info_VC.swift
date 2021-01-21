@@ -15,7 +15,7 @@ class Info_VC: UIViewController {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.textAlignment = .center
         tv.font = .boldSystemFont(ofSize: 30)
-        tv.text = "Examples of use: MVVM - C and RFP with RxSwift"
+        tv.text = "Examples of use: MVVM - C and FRP with RxSwift"
         return tv
     }()
     
