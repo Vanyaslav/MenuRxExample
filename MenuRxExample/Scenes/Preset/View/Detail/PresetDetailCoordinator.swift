@@ -9,7 +9,7 @@
 import UIKit
 
 class PresetDetailCoordinator: AppCoordinator {
-    init(with title: String, navigation: UINavigationController) {
+    init(with title: String, navigation: UIViewController) {
         super.init()
         
         let context = PresetDetail.Context()

@@ -19,7 +19,8 @@ class PresetCoordinator: DetailCoordinator {
         controller.manageChild(with: vc, nc: nc)
         
         context.showPresetInfo
-            .map{ ($0, nc ?? UINavigationController()) }
+            .map{ ($0, nc ?? vc) }
+            .unwrap()
             .map(PresetDetailCoordinator.init)
             .subscribe()
             .disposed(by: disposeBag)
