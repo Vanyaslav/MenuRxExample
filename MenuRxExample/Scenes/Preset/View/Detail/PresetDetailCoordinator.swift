@@ -28,7 +28,10 @@ class PresetDetailCoordinator: AppCoordinator {
             .disposed(by: disposeBag)
         
         context.dispose
-            .map{ [self] in disposeBag.dispose() }
+            .map{ [self] in
+                vc.dismiss(animated: true, completion: nil)
+                disposeBag.dispose()
+            }
             .subscribe()
             .disposed(by: disposeBag)
     }

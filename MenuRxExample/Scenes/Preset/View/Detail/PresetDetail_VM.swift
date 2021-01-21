@@ -13,7 +13,7 @@ class PresetDetail_VM {
     // in
     let viewDidLoad = PublishSubject<Void>()
     let presentAlert = PublishSubject<Void>()
-    let viewClosed = PublishSubject<Void>()
+    let closeView = PublishSubject<Void>()
     // out
     let presetTitle: Driver<String>
     
@@ -30,7 +30,7 @@ class PresetDetail_VM {
             .bind(to: context.showAlert)
             .disposed(by: disposeBag)
         
-        viewClosed
+        closeView
             .bind(to: context.dispose)
             .disposed(by: disposeBag)
     }

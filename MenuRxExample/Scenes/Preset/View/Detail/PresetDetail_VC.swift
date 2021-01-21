@@ -22,9 +22,7 @@ class PresetDetail_VC: UIViewController {
         let button = UIButton(type: .close)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.rx.tap
-            .bind{ [weak self] in
-                self?.dismiss(animated: true, completion: nil)
-            }
+            .bind(to: viewModel.closeView)
             .disposed(by: disposeBag)
         return button
     }()
@@ -51,11 +49,6 @@ class PresetDetail_VC: UIViewController {
         
         rx.viewDidLoad
             .bind(to: viewModel.viewDidLoad)
-            .disposed(by: disposeBag)
-        
-        rx.viewDidDisappear
-            .map{ _ in }
-            .bind(to: viewModel.viewClosed)
             .disposed(by: disposeBag)
     }
     
