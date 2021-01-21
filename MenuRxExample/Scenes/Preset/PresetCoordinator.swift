@@ -20,7 +20,6 @@ class PresetCoordinator: DetailCoordinator {
         
         context.showPresetInfo
             .map{ ($0, nc ?? vc) }
-            .unwrap()
             .map(PresetDetailCoordinator.init)
             .subscribe()
             .disposed(by: disposeBag)
