@@ -22,10 +22,14 @@ extension Preset {
                                         guard let title = textField.text,
                                               title.count >= minimalPresetNameLength
                                         else {
-                                            context.showCreatePresetAlert.onNext(())
+                                            context
+                                                .showCreatePresetAlert
+                                                .onNext(())
                                             return
                                         }
-                                        context.storePreset.onNext(title)
+                                        context
+                                            .storePreset
+                                            .onNext(title)
                                       }))
         return alert
     }

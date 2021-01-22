@@ -27,7 +27,7 @@ extension Menu.ItemEnum {
             return .magenta
         case .info:
             return UIColor
-                .label
+                .yellow
                 .withAlphaComponent(0.3)
         }
     }
