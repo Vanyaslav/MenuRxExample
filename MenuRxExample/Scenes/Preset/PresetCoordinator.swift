@@ -16,7 +16,7 @@ class PresetCoordinator: DetailCoordinator {
         super.init()
         let context = Preset.Context()
         let vc = Preset_VC(viewModel: Preset_VM(context: context))
-        controller.manageChild(with: vc, nc: nc)
+        controller.showScene(with: vc, nc: nc)
         
         context.showPresetInfo
             .map{ ($0, nc ?? vc) }
@@ -26,7 +26,9 @@ class PresetCoordinator: DetailCoordinator {
         
         context.showCreatePresetAlert
             .map{ context }
-            .map(vc.showCreatePresetAlert)
+            .map(Preset.buildCreatePresetAlert)
+            .map{ ($0, true, nil) }
+            .map(vc.present)
             .subscribe()
             .disposed(by: disposeBag)
         

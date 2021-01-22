@@ -20,11 +20,11 @@
 		A10D2D112489567D00923F9E /* Menu_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D2D102489567D00923F9E /* Menu_VM.swift */; };
 		A11A8EA525B003B600514033 /* UISplitViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */; };
 		A11A8EAA25B00E1D00514033 /* PresetDetail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */; };
+		A1356F9225BB72890041BF7C /* Preset+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1356F9125BB72890041BF7C /* Preset+Alert.swift */; };
 		A15EC73E2552B3E9004B8C87 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */; };
 		A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7412552B433004B8C87 /* Disposable+Ext.swift */; };
 		A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */; };
 		A15EC74B2552BC59004B8C87 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC74A2552BC59004B8C87 /* Array+Ext.swift */; };
-		A15EC7652552E42F004B8C87 /* Preset_VC+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */; };
 		A15EC76D2552ED3D004B8C87 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC76C2552ED3D004B8C87 /* Preset.swift */; };
 		A163BE88250FB40500968DC0 /* UiViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A163BE87250FB40500968DC0 /* UiViewController+Extension.swift */; };
 		A16EC88F2551FA5C00248AFC /* PresetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16EC88E2551FA5C00248AFC /* PresetCoordinator.swift */; };
@@ -66,11 +66,11 @@
 		A10D2D102489567D00923F9E /* Menu_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_VM.swift; sourceTree = "<group>"; };
 		A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISplitViewController+Ext.swift"; sourceTree = "<group>"; };
 		A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDetail_VC.swift; sourceTree = "<group>"; };
+		A1356F9125BB72890041BF7C /* Preset+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset+Alert.swift"; sourceTree = "<group>"; };
 		A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		A15EC7412552B433004B8C87 /* Disposable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disposable+Ext.swift"; sourceTree = "<group>"; };
 		A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Ext.swift"; sourceTree = "<group>"; };
 		A15EC74A2552BC59004B8C87 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
-		A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset_VC+Alerts.swift"; sourceTree = "<group>"; };
 		A15EC76C2552ED3D004B8C87 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		A163BE87250FB40500968DC0 /* UiViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extension.swift"; sourceTree = "<group>"; };
 		A16EC88E2551FA5C00248AFC /* PresetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetCoordinator.swift; sourceTree = "<group>"; };
@@ -206,6 +206,7 @@
 			children = (
 				A15EC76C2552ED3D004B8C87 /* Preset.swift */,
 				A192A10225AA17BD00E7EA9D /* Preset+Defaults.swift */,
+				A1356F9125BB72890041BF7C /* Preset+Alert.swift */,
 				A1ADE7232551F4FD001B59ED /* Model */,
 				A1ADE7222551F4F1001B59ED /* View */,
 				A15EC7632552E3F6004B8C87 /* Extension */,
@@ -263,7 +264,6 @@
 				A11A8EA825B00DFC00514033 /* Detail */,
 				A185BD02254DF7440057F2DB /* Cell */,
 				A185BCF4254DC1F30057F2DB /* Preset_VC.swift */,
-				A15EC7642552E42F004B8C87 /* Preset_VC+Alerts.swift */,
 				A1ADE71525519866001B59ED /* Preset_VC+HeaderTableView.swift */,
 			);
 			path = View;
@@ -452,9 +452,9 @@
 				A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */,
 				A1904E9225AAF84D003C510D /* InfoCoordinator.swift in Sources */,
 				A185BD04254DF7770057F2DB /* PresetsCell.swift in Sources */,
-				A15EC7652552E42F004B8C87 /* Preset_VC+Alerts.swift in Sources */,
 				A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */,
 				A15EC76D2552ED3D004B8C87 /* Preset.swift in Sources */,
+				A1356F9225BB72890041BF7C /* Preset+Alert.swift in Sources */,
 				A192A10325AA17BD00E7EA9D /* Preset+Defaults.swift in Sources */,
 				A185BCF5254DC1F30057F2DB /* Preset_VC.swift in Sources */,
 				A10D2D112489567D00923F9E /* Menu_VM.swift in Sources */,

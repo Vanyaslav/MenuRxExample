@@ -14,6 +14,6 @@ class SelectionCoordinator: DetailCoordinatorProtocol {
                   item: Menu.ItemEnum?) {
         guard let menuItem = item else { return }
         let vc = Selection_VC(with: Selection_VM(with: menuItem))        
-        controller.manageChild(with: vc, nc: nc)
+        controller.showScene(with: vc, nc: nc)
     }
 }

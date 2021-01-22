@@ -10,8 +10,8 @@ import UIKit
 
 // self as a managing controller
 extension UIViewController {
-    func manageChild(with vc: UIViewController,
-                     nc: UINavigationController?) {
+    func showScene(with vc: UIViewController,
+                        nc: UINavigationController?) {
         // UISplitViewController solution
         if let controller = self as? UISplitViewController {
             if let nc = nc {
