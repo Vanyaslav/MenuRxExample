@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class Info_VC: UIViewController {
     private lazy
@@ -19,9 +21,12 @@ class Info_VC: UIViewController {
         return tv
     }()
     
-    init(with color: UIColor? = nil) {
+    private
+    let viewModel: Info_VM
+    
+    init(with viewModel: Info_VM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        view.backgroundColor = color
     }
     
     required init?(coder: NSCoder) {
@@ -32,5 +37,26 @@ class Info_VC: UIViewController {
         super.loadView()
         view.addSubview(infoView)
         infoView.fitScreen(with: view)
+    }
+}
+
+class Info_VM {
+    // in
+    let didLoad = PublishSubject<Void>()
+    // out
+    let viewTitle: Driver<String>
+    let viewBackgroundColor: Driver<UIColor>
+    
+    private
+    let disposeBag = DisposeBag()
+    
+    init(with item: Menu.ItemEnum?) {
+        viewTitle = didLoad
+            .map{ item?.title ?? "" }
+            .asDriver()
+        
+        viewBackgroundColor = didLoad
+            .map{ item?.backgroundColor ?? .darkGray }
+            .asDriver()
     }
 }

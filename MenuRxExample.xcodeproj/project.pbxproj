@@ -21,6 +21,7 @@
 		A11A8EA525B003B600514033 /* UISplitViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */; };
 		A11A8EAA25B00E1D00514033 /* PresetDetail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */; };
 		A1356F9225BB72890041BF7C /* Preset+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1356F9125BB72890041BF7C /* Preset+Alert.swift */; };
+		A1356F9725BB85E30041BF7C /* Menu+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1356F9625BB85E30041BF7C /* Menu+UI.swift */; };
 		A15EC73E2552B3E9004B8C87 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */; };
 		A15EC7422552B433004B8C87 /* Disposable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7412552B433004B8C87 /* Disposable+Ext.swift */; };
 		A15EC7452552B458004B8C87 /* ObservableType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */; };
@@ -67,6 +68,7 @@
 		A11A8EA425B003B600514033 /* UISplitViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISplitViewController+Ext.swift"; sourceTree = "<group>"; };
 		A11A8EA925B00E1D00514033 /* PresetDetail_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetDetail_VC.swift; sourceTree = "<group>"; };
 		A1356F9125BB72890041BF7C /* Preset+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preset+Alert.swift"; sourceTree = "<group>"; };
+		A1356F9625BB85E30041BF7C /* Menu+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+UI.swift"; sourceTree = "<group>"; };
 		A15EC73D2552B3E9004B8C87 /* UIButton+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		A15EC7412552B433004B8C87 /* Disposable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disposable+Ext.swift"; sourceTree = "<group>"; };
 		A15EC7442552B458004B8C87 /* ObservableType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Ext.swift"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				A10D2D0B2489536C00923F9E /* Menu.swift */,
+				A1356F9625BB85E30041BF7C /* Menu+UI.swift */,
 				A192A0F025AA0CD500E7EA9D /* Menu+Defaults.swift */,
 				A192A10725AA1D5600E7EA9D /* Model */,
 				A192A0F625AA0E5400E7EA9D /* View */,
@@ -452,6 +455,7 @@
 				A192A0ED25A9CEB900E7EA9D /* UILabel+Ext.swift in Sources */,
 				A1904E9225AAF84D003C510D /* InfoCoordinator.swift in Sources */,
 				A185BD04254DF7770057F2DB /* PresetsCell.swift in Sources */,
+				A1356F9725BB85E30041BF7C /* Menu+UI.swift in Sources */,
 				A192A0F125AA0CD500E7EA9D /* Menu+Defaults.swift in Sources */,
 				A15EC76D2552ED3D004B8C87 /* Preset.swift in Sources */,
 				A1356F9225BB72890041BF7C /* Preset+Alert.swift in Sources */,

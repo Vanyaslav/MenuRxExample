@@ -18,20 +18,5 @@ extension Menu {
 class Menu {
     enum ItemEnum: Int, CaseIterable {
         case preset = 0, select1, select2, select3, info
-        
-        var title: String {
-            switch self {
-            case .preset:
-                return "Presets"
-            case .select1:
-                return "First selection"
-            case .select2:
-                return "Second selection"
-            case .select3:
-                return "Third selection"
-            case .info:
-                return "Info"
-            }
-        }
     }
 }

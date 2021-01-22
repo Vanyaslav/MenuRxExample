@@ -46,6 +46,11 @@ class Selection_VC: UIViewController {
             .map{ $0.backgroundColor }
             .drive(view.rx.backgroundColor)
             .disposed(by: disposeBag)
+        
+        viewModel.currentItem
+            .map{ $0.title }
+            .drive(rx.title)
+            .disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
