@@ -19,19 +19,17 @@ class PresetDetailCoordinator: AppCoordinator {
         navigation.present(vc, animated: true, completion: nil)
         
         context.showAlert
-            .map{ title in
-                let alert = UIAlertController.buildBasicAlert(with: "Preset " + "\(title)",
-                                                              message: "can be loaded!!")
-                vc.present(alert, animated: true, completion: nil)
-            }
+            .map{ ("Preset " + $0, "can be loaded!!", nil) }
+            .map(UIAlertController.buildBasicAlert)
+            .map{ ($0, true, nil) }
+            .map(vc.present)
             .subscribe()
             .disposed(by: disposeBag)
         
         context.dispose
-            .map{ [self] in
-                vc.dismiss(animated: true, completion: nil)
-                disposeBag.dispose()
-            }
+            .map{ (true, nil) }
+            .map(vc.dismiss)
+            .map{ [self] in disposeBag.dispose }
             .subscribe()
             .disposed(by: disposeBag)
     }
