@@ -12,6 +12,6 @@ class InfoCoordinator: DetailCoordinatorProtocol {
     required init(controller: UIViewController,
                   nc: UINavigationController? = nil,
                   item: Menu.ItemEnum? = nil) {
-        controller.showScene(with: Info_VC(), nc: nc)
+        controller.showScene(with: Info_VC(with: item?.backgroundColor), nc: nc)
     }
 }

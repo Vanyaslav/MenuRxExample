@@ -26,7 +26,7 @@ class PresetCoordinator: DetailCoordinator {
         
         context.showCreatePresetAlert
             .map{ context }
-            .map(Preset.buildCreatePresetAlert)
+            .map(Preset.buildCreateAlert)
             .map{ ($0, true, nil) }
             .map(vc.present)
             .subscribe()

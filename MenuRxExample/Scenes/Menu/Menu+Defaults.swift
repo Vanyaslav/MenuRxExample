@@ -25,7 +25,7 @@ extension Menu.ItemEnum {
         switch self {
         case .preset: return PresetCoordinator(controller: vc, nc: nc)
             // No navigation Bar for splited view iPhone Max, iPad
-        case .info: return InfoCoordinator(controller: vc)
+        case .info: return InfoCoordinator(controller: vc, item: self)
         default: return SelectionCoordinator(controller: vc, nc: nc, item: self)
         }
     }
@@ -43,7 +43,9 @@ extension Menu.ItemEnum {
         case .select3:
             return .magenta
         case .info:
-            return .black
+            return UIColor
+                .label
+                .withAlphaComponent(0.3)
         }
     }
 }

@@ -19,8 +19,9 @@ class Info_VC: UIViewController {
         return tv
     }()
     
-    init() {
+    init(with color: UIColor? = nil) {
         super.init(nibName: nil, bundle: nil)
+        view.backgroundColor = color
     }
     
     required init?(coder: NSCoder) {
