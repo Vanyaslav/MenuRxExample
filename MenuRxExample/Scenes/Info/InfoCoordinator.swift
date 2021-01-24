@@ -8,11 +8,12 @@
 
 import UIKit
 
-class InfoCoordinator: DetailCoordinatorProtocol {
+class InfoCoordinator: DetailCoordinator {
     required init(controller: UIViewController,
                   nc: UINavigationController? = nil,
                   item: Menu.ItemEnum? = nil) {
-        controller.showScene(with: Info_VC(with: Info_VM(with: item)),
-                             nc: nc)
+        super.init()
+        let vc = Info_VC(with: item)
+        controller.showScene(with: vc, nc: nc)
     }
 }

@@ -17,31 +17,14 @@ class Info_VC: UIViewController {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.textAlignment = .center
         tv.font = .boldSystemFont(ofSize: 30)
-        viewModel.viewContent
-            .drive(tv.rx.text)
-            .disposed(by: disposeBag)
+        tv.text = "Examples of use: MVVM - C and FRP with RxSwift"
         return tv
     }()
-    private
-    let disposeBag = DisposeBag()
-    private
-    let viewModel: Info_VM
     
-    init(with viewModel: Info_VM) {
-        self.viewModel = viewModel
+    init(with item: Menu.ItemEnum?) {
         super.init(nibName: nil, bundle: nil)
-        
-        rx.viewDidLoad
-            .bind(to: viewModel.didLoad)
-            .disposed(by: disposeBag)
-        
-        viewModel.viewBackgroundColor
-            .drive(view.rx.backgroundColor)
-            .disposed(by: disposeBag)
-        
-        viewModel.viewTitle
-            .drive(rx.title)
-            .disposed(by: disposeBag)
+        view.backgroundColor = item?.backgroundColor
+        title = item?.title
     }
     
     required init?(coder: NSCoder) {
@@ -52,30 +35,5 @@ class Info_VC: UIViewController {
         super.loadView()
         view.addSubview(infoView)
         infoView.fitScreen(with: view)
-    }
-}
-
-class Info_VM {
-    // in
-    let didLoad = PublishSubject<Void>()
-    // out
-    let viewTitle: Driver<String>
-    let viewBackgroundColor: Driver<UIColor>
-    let viewContent: Driver<String>
-    private
-    let disposeBag = DisposeBag()
-    
-    init(with item: Menu.ItemEnum?) {
-        viewTitle = didLoad
-            .mapTo(item?.title ?? "").debug()
-            .asDriver()
-        
-        viewBackgroundColor = didLoad
-            .mapTo(item?.backgroundColor ?? .darkGray)
-            .asDriver()
-        
-        viewContent = didLoad
-            .mapTo("Examples of use: MVVM - C and FRP with RxSwift")
-            .asDriver()
     }
 }

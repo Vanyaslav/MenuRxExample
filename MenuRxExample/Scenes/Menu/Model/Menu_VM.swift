@@ -25,12 +25,16 @@ class Menu_VM {
         let selection = Observable
             .merge(didLoad.map{ initialPage.rawValue },
                    itemPressed)
+        
+        selectedItem = selection.asDriver()
+        
         selection
-            .map{ Menu.ItemEnum(rawValue: $0) }
+            .withPrevious()
+            .filter{ $0 != $1 }
+            .map{ $0.1 }
+            .map(Menu.ItemEnum.init)
             .unwrap()
             .bind(to: context.itemSelected)
             .disposed(by: disposeBag)
-        
-        selectedItem = selection.asDriver()
     }
 }

@@ -228,8 +228,8 @@
 		A1904E9025AAF824003C510D /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				A1904E9425AAFC4F003C510D /* Info_VC.swift */,
 				A1904E9125AAF84D003C510D /* InfoCoordinator.swift */,
+				A1904E9425AAFC4F003C510D /* Info_VC.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
