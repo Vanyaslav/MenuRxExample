@@ -45,7 +45,7 @@ class Preset_VM {
         
         isEditingAllowed = userPresetModels
             .filter{ $0.model == .user }
-            .map{ $0.items.count > 0 }
+            .map{ !$0.items.isEmpty }
             .asDriver()
         
         showAlert

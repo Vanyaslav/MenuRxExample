@@ -29,9 +29,6 @@ class Menu_VM {
         selectedItem = selection.asDriver()
         
         selection
-            .withPrevious()
-            .filter{ $0 != $1 }
-            .map{ $0.1 }
             .map(Menu.ItemEnum.init)
             .unwrap()
             .bind(to: context.itemSelected)
