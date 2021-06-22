@@ -21,8 +21,7 @@ class Preset_VM {
     let loadTable: Driver<[SectionModel]>
     let isEditingAllowed: Driver<Bool>
     
-    private
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init(context: Preset.Context,
          service: StorageService = StorageService()) {

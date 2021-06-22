@@ -10,8 +10,7 @@ import UIKit
 
 extension Menu.ItemEnum {
     /// selected item when the app starts
-    static
-    let defaultItem: Menu.ItemEnum = .info
+    static let defaultItem: Menu.ItemEnum = .info
 }
 
 extension Menu.ItemEnum {

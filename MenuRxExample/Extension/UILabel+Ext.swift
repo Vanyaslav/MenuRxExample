@@ -9,8 +9,7 @@
 import UIKit
 
 extension UILabel {
-    static
-    func loadBasic() -> UILabel {
+    static func loadBasic() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

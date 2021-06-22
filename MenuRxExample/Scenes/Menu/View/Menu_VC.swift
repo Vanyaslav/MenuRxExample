@@ -11,8 +11,7 @@ import RxSwift
 import RxCocoa
 
 class Menu_VC: UIViewController {
-    private lazy
-    var menuView: UIStackView = {
+    private lazy var menuView: UIStackView = {
         let sv = UIStackView()
             sv.translatesAutoresizingMaskIntoConstraints = false
             sv.distribution = .fillEqually
@@ -42,10 +41,8 @@ class Menu_VC: UIViewController {
         return sv
     }()
     
-    private
-    let disposeBag = DisposeBag()
-    private
-    let viewModel: Menu_VM
+    private let disposeBag = DisposeBag()
+    private let viewModel: Menu_VM
     
     init(viewModel: Menu_VM) {
         self.viewModel = viewModel

@@ -11,8 +11,7 @@ import RxSwift
 import RxCocoa
 
 class Info_VC: UIViewController {
-    private lazy
-    var infoView: UITextView = {
+    private lazy var infoView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.textAlignment = .center

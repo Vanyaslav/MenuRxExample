@@ -17,8 +17,7 @@ class PresetDetail {
 }
 
 class PresetDetail_VC: UIViewController {
-    private lazy
-    var closeButton: UIButton = {
+    private lazy var closeButton: UIButton = {
         let button = UIButton(type: .close)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.rx.tap
@@ -26,8 +25,7 @@ class PresetDetail_VC: UIViewController {
             .disposed(by: disposeBag)
         return button
     }()
-    private lazy
-    var infoButton: UIButton = {
+    private lazy var infoButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.red.withAlphaComponent(0.7)
@@ -38,10 +36,8 @@ class PresetDetail_VC: UIViewController {
             .disposed(by: disposeBag)
         return button
     }()
-    private
-    let disposeBag = DisposeBag()
-    private
-    let viewModel: PresetDetail_VM
+    private let disposeBag = DisposeBag()
+    private let viewModel: PresetDetail_VM
     
     init(viewModel: PresetDetail_VM) {
         self.viewModel = viewModel

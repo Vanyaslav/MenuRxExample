@@ -17,8 +17,7 @@ class PresetDetail_VM {
     // out
     let presetTitle: Driver<String>
     
-    private
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init(title: String, context: PresetDetail.Context) {
         presetTitle = viewDidLoad

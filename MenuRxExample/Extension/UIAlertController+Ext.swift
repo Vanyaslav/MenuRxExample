@@ -9,8 +9,7 @@
 import UIKit
 
 extension UIAlertController {
-    static
-    func buildBasicAlert(with title: String? = nil,
+    static func buildBasicAlert(with title: String? = nil,
                          message: String? = nil,
                          disposeAction: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

@@ -9,8 +9,7 @@
 import Foundation
 
 extension Preset {
-    static
-    let dataStringSeparator: String = ";"
+    static let dataStringSeparator: String = ";"
 }
 
 extension Array where Element == String {

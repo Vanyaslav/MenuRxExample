@@ -9,8 +9,7 @@
 import UIKit
 
 extension Preset {
-    static
-    func buildCreateAlert(with context: Context) -> UIAlertController {
+    static func buildCreateAlert(with context: Context) -> UIAlertController {
         let alert = UIAlertController.buildBasicAlert(with: nil,
                                                       message: "Create a new preset:")
         alert.addTextField()

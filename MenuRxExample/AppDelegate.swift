@@ -12,10 +12,8 @@ import RxSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    private
-    let disposeBag = DisposeBag()
-    private
-    var appCoordinator: AppCoordinator? {
+    private let disposeBag = DisposeBag()
+    private var appCoordinator: AppCoordinator? {
         didSet {
             #if DEBUG
             Observable<Int>

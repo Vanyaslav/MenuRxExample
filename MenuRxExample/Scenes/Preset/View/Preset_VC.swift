@@ -11,8 +11,7 @@ import RxSwift
 import RxDataSources
 
 class Preset_VC: UIViewController {
-    lazy
-    var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         // tv.rowHeight = 54
@@ -48,8 +47,7 @@ class Preset_VC: UIViewController {
         return tv
     }()
     
-    lazy
-    var addPresetButton: UIButton = {
+    lazy var addPresetButton: UIButton = {
         let button = UIButton()
         button.setTitle("Add", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
@@ -60,10 +58,8 @@ class Preset_VC: UIViewController {
         return button
     }()
     
-    private
-    let disposeBag = DisposeBag()
-    private
-    let viewModel: Preset_VM
+    private let disposeBag = DisposeBag()
+    private let viewModel: Preset_VM
     
     init(viewModel: Preset_VM) {
         self.viewModel = viewModel

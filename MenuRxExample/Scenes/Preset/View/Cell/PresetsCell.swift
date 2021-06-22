@@ -14,16 +14,14 @@ extension PresetsCell {
 }
 
 class PresetsCell: UITableViewCell {
-    private lazy
-    var titleLabel = UILabel.loadBasic()
-    
-    private lazy
-    var dateLabel = UILabel.loadBasic()
+    private lazy var titleLabel = UILabel.loadBasic()
+    private lazy var dateLabel = UILabel.loadBasic()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        [titleLabel, dateLabel].forEach(addSubview)
+        [titleLabel, dateLabel]
+            .forEach(addSubview)
         
         let offset: CGFloat = 16
         

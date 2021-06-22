@@ -9,10 +9,8 @@
 import Foundation
 
 extension Preset {
-    static
-    let minimalPresetNameLength: Int = 3
+    static let minimalPresetNameLength: Int = 3
     
-    static
-    let factoryItems = ["First preset;Feb 02, 2222",
-                        "Second preset;Feb 02, 2222"]
+    static let factoryItems = ["First preset;Feb 02, 2222",
+                               "Second preset;Feb 02, 2222"]
 }
